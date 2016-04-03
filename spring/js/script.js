@@ -9,10 +9,12 @@ window.onload=function(){
 	//设置点击碟片图标开始暂停音乐
 	music.addEventListener("touchstart",function(event){
 		if(audio.paused){
-			this.style.animationPlayState="running";
+			music.setAttribute("class","play");
+			//this.style.animationPlayState="running";
 			audio.play();
 		}else{
-			this.style.animationPlayState="paused";
+			music.setAttribute("class","");
+			//this.style.animationPlayState="paused";
 			audio.pause();
 		}
 	},false);
