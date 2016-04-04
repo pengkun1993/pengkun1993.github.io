@@ -81,9 +81,9 @@ html, body { height: 100%; overflow: hidden; }
 #page3.fadeIn { -webkit-transform: translate(0, -100%); transform: translate(0, -100%); }
 #page3 > .bg { width: 100%; height: 100%; background: url('../images/p3_bg.jpg') no-repeat center center; background-size: 100%; }
 #page3 > .p3_logo { position: absolute; top: 10.1328vw; right: 0; left: 0; margin: auto; width: 36.8421vw; height: 12.3127vw; background: url('../images/p3_logo.png') no-repeat center center; background-size: 100%; }
-#page3 > .p3_title { position: absolute; top: 34.8691vw; right: 0; left: 0; margin: auto; width: 50.631vw; height: 95.5122vw; background: url('../images/p3_title.png') no-repeat center center; background-size: 100%; }
-#page3 > .p3_first { position: absolute; top: 44.5476vw; left: 3.508vw; width: 22.105vw; height: 68.9044vw; background: url('../images/p3_couplet_second.png') no-repeat center center; background-size: 100%; }
-#page3 > .p3_second { position: absolute; top: 44.5476vw; right: 3.508vw; width: 22.105vw; height: 68.9044vw; background: url('../images/p3_couplet_first.png') no-repeat center center; background-size: 100%; }
+#page3 > .p3_title { position: absolute; top: 30.8691vw; right: 0; left: 0; margin: auto; width: 50.631vw; height: 95.5122vw; background: url('../images/p3_title.png') no-repeat center center; background-size: 100%; }
+#page3 > .p3_first { position: absolute; top: 40.5476vw; left: 3.508vw; width: 22.105vw; height: 68.9044vw; background: url('../images/p3_couplet_second.png') no-repeat center center; background-size: 100%; }
+#page3 > .p3_second { position: absolute; top: 40.5476vw; right: 3.508vw; width: 22.105vw; height: 68.9044vw; background: url('../images/p3_couplet_first.png') no-repeat center center; background-size: 100%; }
 #page3 > .p3_blessing { position: absolute; left: 0; right: 0; bottom: 6.8637vw; margin: auto; width: 24.5614vw; height: 24.5614vw; background: url('../images/p3_blessing.png') no-repeat center center; background-size: 100%; animation: p3_blessing 2s linear 1s infinite; -webkit-animation: p3_blessing 2s linear 1s infinite; }
 @keyframes p3_blessing {
 	0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
