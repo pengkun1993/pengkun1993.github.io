@@ -15,10 +15,6 @@ html, body { height: 100%; overflow: hidden; }
 	0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
 	100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
 }
-@keyframes music_disc {
-	0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
-	100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
-}
 /*page*/
 .page { width: 100%; height: 100%; position: absolute; }
 
@@ -29,6 +25,10 @@ html, body { height: 100%; overflow: hidden; }
 #page1 > .p1_lantern { position: absolute; color: #fff; top: 0; left: 0; right: 0; margin: auto; background: url('../images/p1_lantern.png') no-repeat center center; background-size: 100%; height: 67.7227vh; width: 44.9122vw; text-align: center; padding-top: 28vh; box-sizing: border-box; font-size: 3.4rem; }
 #page1 > .p1_lantern:before { z-index: -1; content: ""; position: absolute; top: 23.50vh; left: 0; right: 0; margin: auto; height: 30vw; width: 30vw; border-radius: 50%; background: #D92952; box-shadow: 0 0 10vw 10vw #D92952; opacity: .8; animation: p1_lantern .5s linear  0s infinite alternate; -webkit-animation: p1_lantern .5s linear 0s infinite alternate; }
 @keyframes p1_lantern {
+	0% { opacity: .5; -webkit-transform: scale(.8, .8); transform: scale(.8, .8); }
+	100% { opacity: 1; }
+}
+@-webkit-keyframes p1_lantern {
 	0% { opacity: .5; -webkit-transform: scale(.8, .8); transform: scale(.8, .8); }
 	100% { opacity: 1; }
 }
@@ -43,17 +43,33 @@ html, body { height: 100%; overflow: hidden; }
 	0% { opacity: 0; }
 	100% { opacity: 1; }
 }
+@-webkit-keyframes bg {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
 #page2 > .p2_circle { width: 61.4334vw; height: 61.4334vw; position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin: auto; background: url('../images/p2_circle_outer.png') no-repeat center center; background-size: 100%; -webkit-animation: p2_circle_outer 1s linear 3s infinite; animation: p2_circle_outer 1s linear 3s infinite; }
 @keyframes p2_circle_outer {
 	0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
 	100% { -webkit-transform: rotate(-360deg); transform: rotate(-360deg); }
 }
+@-webkit-keyframes p2_circle_outer {
+	0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(-360deg); transform: rotate(-360deg); }
+}
 #page2 > .p2_circle:before { content: ""; width: 46.075vw; height: 46.075vw; position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin: auto; background: url('../images/p2_circle_middle.png') no-repeat center center; background-size: 100%; -webkit-animation: p2_circle_middle 1s linear 2s infinite; animation: p2_circle_middle 1s linear 2s infinite; }
+@-webkit-keyframes p2_circle_middle {
+	0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(720deg); transform: rotate(720deg); }
+}
 @keyframes p2_circle_middle {
 	0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
 	100% { -webkit-transform: rotate(720deg); transform: rotate(720deg); }
 }
 #page2 > .p2_circle:after { content: ""; width: 37.5426vw; height: 37.5426vw; position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin: auto; background: url('../images/p2_circle_inner.png') no-repeat center center; background-size: 100%; -webkit-animation: p2_circle_inner 1s linear 1s infinite; animation: p2_circle_inner 1s linear 1s infinite; }
+@-webkit-keyframes p2_circle_inner {
+	0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(-1080deg); transform: rotate(-1080deg); }
+}
 @keyframes p2_circle_inner {
 	0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
 	100% { -webkit-transform: rotate(-1080deg); transform: rotate(-1080deg); }
@@ -70,6 +86,10 @@ html, body { height: 100%; overflow: hidden; }
 #page3 > .p3_second { position: absolute; top: 28.3267vh; right: 3.508vw; width: 22.105vw; height: 38.6138vh; background: url('../images/p3_couplet_first.png') no-repeat center center; background-size: 100%; }
 #page3 > .p3_blessing { position: absolute; left: 0; right: 0; bottom: 8.89vh; margin: auto; width: 24.5614vw; height: 24.5614vw; background: url('../images/p3_blessing.png') no-repeat center center; background-size: 100%; animation: p3_blessing 2s linear 1s infinite; -webkit-animation: p3_blessing 2s linear 1s infinite; }
 @keyframes p3_blessing {
+	0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@-webkit-keyframes p3_blessing {
 	0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
 	100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
 }
