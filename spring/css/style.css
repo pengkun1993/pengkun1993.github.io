@@ -3,8 +3,8 @@
 html, body { height: 100%; overflow: hidden; }
 
 /*image*/
-.image { z-index: 5; position: fixed; width: 16.0714vw; height: 16.0714vw; right: 3.533vw; top: 6.06vw; border: 0.706vw solid #EA2645; border-radius: 50%; background: #fff; }
-.image > img:first-of-type { position: absolute; width: 12.3674vw; height: 12.3674vw; top: 0; right: 0; bottom: 0; left: 0; margin: auto; }
+.image{z-index:5;position:fixed;width:16.0714vw;height:16.0714vw;right:3.533vw;top:6.06vw;border:0.706vw solid #EA2645;border-radius:50%;background:#fff}
+.image > img:first-of-type{position:absolute;width:12.3674vw;height:12.3674vw;top:0;right:0;bottom:0;left:0;margin:auto}
 .image > img:last-of-type { position: absolute; width: 4.3vw; height: 6.3604vw; top: 3.533vw; right: 0; }
 .image > img.play { animation: music_disc 2s linear 0s infinite; -webkit-animation: music_disc 2s linear 0s infinite; }
 @keyframes music_disc {
