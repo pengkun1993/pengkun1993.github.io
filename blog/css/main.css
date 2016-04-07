@@ -1,0 +1,99 @@
+/*all Tag*/
+*{
+	padding: 0;
+	margin: 0;
+	border:0;
+	list-style: none;
+	text-decoration:none;
+	font-size: 1.3rem;
+	font-style:"Microsoft Yahei";
+}
+.button{
+	padding:0.5952vw 1.1904vw;
+	border-radius: 10%;
+}
+/*header*/
+#header{
+	position: fixed;
+	top:0;
+	left: 0;
+	width: 100vw;
+	height: 50px;
+	line-height: 50px;
+	background:black;
+	opacity: .8;
+}
+#header > h1{
+	font-size: 1.8rem;
+	float: left;
+	margin-left: 20px;
+}
+#header > h1 > a{
+	color:#fff;
+}
+#header > #nav{
+	float: right;
+	margin-right: 20px;
+}
+.special > .menuToggle{
+	font-size: 1.8rem;
+	color:#fff;
+	height: 50px;
+	display: inline-block;
+}
+#nav .special{
+	display: inline-block;
+	margin-right: 30px;
+}
+/*banner*/
+#banner{
+	position: absolute;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background:url("../img/banner.jpg") no-repeat center center;
+	background-size: 100%;
+	z-index: -5;
+}
+#banner:before{
+	content: "";
+	position: absolute;
+	top:0;
+	width: 100vw;
+	height: 100vh;
+	background-color: black;
+	background-size: 100%;
+	opacity: .3;
+}
+#banner > .inner{
+	position: absolute;
+	top:40.4%;
+	width: 100vw;
+	text-align: center;
+	color:#fff;
+}
+.inner > h2{
+	margin: auto;
+	padding: 20px 0;
+	width: 150px;
+	font-size: 30px;
+	font-weight: bold;
+	border-top:2px solid #fff;
+	border-bottom:2px solid #fff;
+}
+.inner > p{
+	margin:40px auto;
+}
+.actions  a{
+	background-color: red;
+	color:#fff;
+}
+.more{
+	position: absolute;
+	top:88%;
+	left: 0;
+	right: 0;
+	margin:auto;
+	text-align: center;
+	color:#fff;
+}
