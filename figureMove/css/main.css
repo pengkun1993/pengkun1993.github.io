@@ -7,18 +7,17 @@
 /*figure*/
 figure{
 	position: relative;
-	height: 500px;
 	overflow: hidden;
 	float: left;
 }
 @media  screen and (max-width:500px){
-	figure{width: 100%;}
+	figure{width: 100vw;height: 100vw;}
 }
 @media  screen and (min-width:501px) and (max-width:1000px){
-	figure{width: 50%;}
+	figure{width: 50vw;height: 50vw;}
 }
 @media  screen and (min-width:1001px){
-	figure{width: 33.33%;}
+	figure{width: 33.33vw;height: 33.33vw;}
 }
 figure > img{
 	position: absolute;
