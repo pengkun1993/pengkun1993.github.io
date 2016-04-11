@@ -25,14 +25,14 @@ function randomColor() {
 }
 
 
-function lerpAngle(a, b, t) {
+function lerpAngle(a, b, t) {//延缓角度转变
 	var d = b - a;
 	if (d > Math.PI) d = d - 2 * Math.PI;
 	if (d < -Math.PI) d = d + 2 * Math.PI;
 	return a + d * t;
 }
 
-function lerpDistance(aim, cur, ratio) {
+function lerpDistance(aim, cur, ratio) {//延缓向鼠标移动
 	var delta = cur - aim;
 	return aim + delta * ratio;
 }
