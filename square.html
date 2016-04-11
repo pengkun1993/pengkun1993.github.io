@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>旋转正方形</title>
+	<style type="text/css">
+		*{
+			padding:0;
+			margin:0;
+			border:none;
+			outline: 0;
+		}
+		#threeD{
+			perspective:2000px;
+			perspective-origin:50% 50%;
+		}
+		#square{
+			position: absolute;
+			top:100px;
+			left: 0;
+			right: 0;
+			width: 200px;
+			height: 200px;
+			margin:auto;
+			transition:transform 1s;
+			transform-origin: center center;
+			transform-style:preserve-3d;
+		}
+		#square:hover{
+			transition:transform 5s;
+			transform: rotate3d(1,1,1,360deg);
+		}
+		.face{
+			position: absolute;
+			top:0;
+			left: 0;
+			right: 0;
+			margin:0;
+			width: 200px;
+			height: 200px;
+			background-color: blue;
+			opacity: .8;
+			font-size: 200px;
+			color:#fff;
+			line-height: 200px;
+			text-align: center;
+			border:1px solid #fff;
+		}
+		#face1{
+			transform-origin:bottom;
+		}
+		#face2{
+			transform-origin:left;
+			transform: rotateY(90deg);
+		}
+		#face4{
+			transform-origin:right;
+			transform: rotateY(-90deg);
+		}
+		#face3{
+			transform-origin:center top;
+			transform: rotateX(-90deg);
+		}
+		#face5{
+			transform-origin:center bottom;
+			transform: rotateX(90deg);
+		}
+		#face6{
+			transform-origin:center center length;
+			transform: translateZ(-200px);
+		}
+		#op{
+			position: absolute;
+			top:600px;
+			left: 0;
+			right: 0;
+			margin:auto;
+			width: 850px;
+		}
+		.range_control{
+			width: 800px;
+			margin:10px auto;
+		}
+	</style>
+	<script type="text/javascript">
+		/*var square;*/
+		window.onload=function(){
+			var square=document.getElementById('square');
+		}
+		function rotate(){
+			var x=document.getElementById('rotatex').value;
+			var y=document.getElementById('rotatey').value;
+			var z=document.getElementById('rotatez').value;
+			var xspan=document.getElementById('xspan');
+			var yspan=document.getElementById('yspan');
+			var zspan=document.getElementById('zspan');
+			square.style.transform="rotateX("+x+"deg) rotateY("+y+"deg) rotateZ("+z+"deg)";
+			xspan.innerHTML=x;yspan.innerHTML=y;zspan.innerHTML=z;
+		}
+	</script>
+</head>
+<body>
+<div id="threeD">
+	<div id="square">
+		<div class="face" id="face1">1</div>
+		<div class="face" id="face2">2</div>
+		<div class="face" id="face3">3</div>
+		<div class="face" id="face4">4</div>
+		<div class="face" id="face5">5</div>
+		<div class="face" id="face6">6</div>
+	</div>
+</div>
+<div id="op">
+	<p>x轴<span id="xspan">0</span>deg</p>
+	<input type="range" id="rotatex" class="range_control" min="-360" max="360" value="0" onchange="rotate()">
+	<p>y轴<span id="yspan">0</span>deg</p>
+	<input type="range" id="rotatey" class="range_control" min="-360" max="360" value="0" onchange="rotate()">
+	<p>z轴<span id="zspan">0</span>deg</p>
+	<input type="range" id="rotatez" class="range_control" min="-360" max="360" value="0" onchange="rotate()">
+</div>
+</body>
+</html>
