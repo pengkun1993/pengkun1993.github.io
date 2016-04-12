@@ -17,6 +17,13 @@ var baby;
 //鼠标指针
 var mx;
 var my;
+//变幻的鱼
+var momSwim=[];
+var momTail=[];
+var momEye=[];
+var babyFade=[]
+var babyTail=[];
+var babyEye=[];
 //函数运行入口
 window.onload=init;
 function init(){
@@ -36,7 +43,26 @@ function init(){
 	//侦听、获取鼠标位置初始化在画布中央
 	mx=canW*0.5;
 	my=canH*0.5;
-	
+	//变幻鱼的变量
+	for(var i=0;i<8;i++){
+		momSwim[i]=new Image();
+		momTail[i]=new Image();
+		babyTail[i]=new Image();
+		momSwim[i].src="src/bigSwim"+i+".png";
+		momTail[i].src="src/bigTail"+i+".png";
+		babyTail[i].src="src/babyTail"+i+".png";
+	}
+	for(var i=0;i<2;i++){
+		momEye[i]=new Image();
+		momEye[i].src="src/bigEye"+i+".png";
+		babyEye[i]=new Image();
+		babyEye[i].src="src/babyEye"+i+".png";
+	}
+	for(var i=0;i<20;i++){
+		babyFade[i]=new Image();
+		babyFade[i].src="src/babyFade"+i+".png";
+	}
+	//循环帧
 	lastTime=Date.now();
 	gameloop();
 }
@@ -55,7 +81,7 @@ function gameloop() {
 	ctx2.clearRect(0,0,canW,canH);
 	mom.draw();
 	baby.draw();
-	momFruitsCollision()
+	momFruitsCollision();
 }
 //侦听鼠标位置方法
 function onMouseMove(event){
