@@ -1,4 +1,4 @@
-function momFruitsCollision(){console.log("a")
+function momFruitsCollision(){
 	for(var i = 0;i<fruit.num;i++){
 		if(fruit.alive[i]){
 			var l=calLength2(mom.x,mom.y,fruit.x[i],fruit.y[i]);

@@ -15,7 +15,7 @@ babyObj.prototype.init = function() {
 	this.timer = 0;
 	this.babybody.src = "src/baby.png";
 	this.babyeye.src = "src/babyEye0.png";
-	this.babytail.src = "src/babytail0.png";
+	this.babytail.src = "src/babyTail0.png";
 }
 babyObj.prototype.draw = function() {
 	//小鱼跟随大鱼移动坐标
