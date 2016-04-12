@@ -16,8 +16,8 @@ momObj.prototype.init = function() {
 }
 momObj.prototype.draw = function() {
 	//沿着鼠标方向移动
-	this.x=lerpDistance(mx,this.x,0.95);
-	this.y=lerpDistance(my,this.y,0.95);
+	this.x=lerpDistance(mx,this.x,0.99);
+	this.y=lerpDistance(my,this.y,0.99);
 	//头转向鼠标
 	var x=mx-this.x;
 	var y=my-this.y;
@@ -31,4 +31,4 @@ momObj.prototype.draw = function() {
 	ctx2.drawImage(this.momeye,-this.momeye.width*0.5,-this.momeye.height*0.5)
 	ctx2.drawImage(this.momtail,-this.momtail.width*0.5+30,-this.momtail.height*0.5)
 	ctx2.restore();
-};
+}

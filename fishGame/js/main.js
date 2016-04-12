@@ -6,13 +6,14 @@ var ctx2;
 var canW;
 var canH;
 var bgPic=new Image();
-//帧变幻时间
+//帧与帧时间间隔
 var lastTime;
 var deltaTime;
 //实物对象
-var ane;
+var ane;//海葵
 var fruit;
 var mom;
+var baby;
 //鼠标指针
 var mx;
 var my;
@@ -31,6 +32,7 @@ function init(){
 	ane=new aneObj();ane.init();
 	fruit=new fruitObj();fruit.init();
 	mom=new momObj();mom.init();
+	baby=new babyObj();baby.init();
 	//侦听、获取鼠标位置初始化在画布中央
 	mx=canW*0.5;
 	my=canH*0.5;
@@ -52,6 +54,8 @@ function gameloop() {
 	fruitNum();
 	ctx2.clearRect(0,0,canW,canH);
 	mom.draw();
+	baby.draw();
+	momFruitsCollision()
 }
 //侦听鼠标位置方法
 function onMouseMove(event){

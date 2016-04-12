@@ -1,5 +1,5 @@
 var fruitObj=function (){
-	this.num=15;
+	this.num=10;
 	this.alive=[];
 	this.x=[];
 	this.y=[];
@@ -18,6 +18,7 @@ fruitObj.prototype.init = function() {
 	}
 }
 fruitObj.prototype.draw= function () {
+	if(deltaTime>20) deltaTime=20;//解决浏览器非当前标签下，不刷新帧导致deltaTime异常大
 	for(var i=0;i<this.num;i++){
 		if(this.alive[i]){
 			if(this.w[i]<this.orange.width){
@@ -26,8 +27,7 @@ fruitObj.prototype.draw= function () {
 				if(this.y[i]>0){
 					this.y[i]-=deltaTime*this.spd[i];//使食物有不同速度的同时，平滑上浮
 				}else{
-					this.alive[i]=false;
-					this.count--;
+					this.dead(i);
 				}
 			}
 			var pic;
@@ -54,6 +54,11 @@ fruitObj.prototype.born=function(i){
 			this.fruitType[i]="orange";
 		}
 }
+fruitObj.prototype.dead= function(i) {
+		this.alive[i]=false;
+		this.count--;
+	
+};
 function fruitNum() {
 	for(var i=0;i<fruit.num && fruit.count<fruit.num;i++){
 		for(var j=0;fruit.alive[j];j++){
