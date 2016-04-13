@@ -69,10 +69,12 @@ babyObj.prototype.change=function(){
 	}
 	//身体颜色变化
 	this.bodyTimer+=deltaTime;
-	if(this.bodyTimer>300){
+	if(this.bodyTimer>200){
 		this.bodyNum++;
 		if(this.bodyNum>19){
 			this.bodyNum=19;
+			gameOver=true;
+			
 		}
 		this.bodyTimer=0;
 	}
