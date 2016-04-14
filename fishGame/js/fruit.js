@@ -1,5 +1,5 @@
 var fruitObj=function (){
-	this.num=15;//生成果实数量
+	this.num=20;//生成果实数量
 	this.alive=[];
 	this.x=[];
 	this.y=[];
