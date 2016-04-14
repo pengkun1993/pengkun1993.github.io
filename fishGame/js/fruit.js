@@ -1,5 +1,5 @@
 var fruitObj=function (){
-	this.num=10;
+	this.num=15;//生成果实数量
 	this.alive=[];
 	this.x=[];
 	this.y=[];
@@ -16,7 +16,7 @@ fruitObj.prototype.init = function() {
 	this.blue.src="src/blue.png";
 	for(var i=0;i<this.num;i++){
 		this.alive[i]=false;
-		this.anei[i]=Math.floor(Math.random()*50);
+		this.anei[i]=0;
 	}
 }
 fruitObj.prototype.draw= function () {
@@ -46,6 +46,7 @@ fruitObj.prototype.draw= function () {
 fruitObj.prototype.born=function(i){
 		this.alive[i]=true;
 		this.spd[i]=Math.random()*0.15;
+		this.anei[i]=Math.floor(Math.random()*50);
 		this.x[i]=ane.headx[this.anei[i]];//随机选取一个海葵
 		this.y[i]=ane.y[i];
 		this.w[i]=0;

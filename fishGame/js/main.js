@@ -17,6 +17,7 @@ var mom;
 var baby;
 var data;
 var wave;
+var dust;
 //鼠标指针
 var mx;
 var my;
@@ -28,6 +29,7 @@ var momEye = [];
 var babyFade = []
 var babyTail = [];
 var babyEye = [];
+var dustPic=[];
 //函数运行入口
 window.onload = init;
 
@@ -53,6 +55,8 @@ function init() {
 	data = new dataObj();
 	wave = new waveObj();
 	wave.init();
+	dust =new dustObj();
+	dust.init()
 	//文字样式
 	ctx2.font = "25px verdana";
 	ctx2.textAlign = "center";
@@ -86,6 +90,10 @@ function init() {
 		babyFade[i] = new Image();
 		babyFade[i].src = "src/babyFade" + i + ".png";
 	}
+	for(var i=0;i<7;i++){
+		dustPic[i]=new Image();
+		dustPic[i].src="src/dust"+i+".png";
+	}
 	//循环帧
 	lastTime = Date.now();
 	gameloop();
@@ -111,6 +119,7 @@ function gameloop() {
 	}
 	data.draw();
 	wave.drawCircle();
+	dust.draw();
 }
 //侦听鼠标位置方法
 function onMouseMove(event) {

@@ -22,8 +22,8 @@ dataObj.prototype.draw = function() {
 	ctx2.restore();
 
 }
-dataObj.prototype.addScore = function() {
-	this.score+=this.fruit*100*this.double;
+dataObj.prototype.addScore = function() {/*console.log("f"+this.fruit+"b"+this.double)*/
+	this.score+=this.fruit*100*this.double;//console.log("score"+this.score);
 	this.fruit=0;
 	this.double=1;
 }

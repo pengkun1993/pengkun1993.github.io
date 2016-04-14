@@ -42,18 +42,18 @@ waveObj.prototype.drawCircle=function(){
 	}
 }
 waveObj.prototype.born=function(x,y,type){
-	for(var i=0;i<20;i++){
-			if(!this.alive[i]){
-				this.x[i]=x;
-				this.y[i]=y;
+	for(var j=0;j<20;j++){
+			if(!this.alive[j]){
+				this.x[j]=x;
+				this.y[j]=y;
 				if(type){
-					wave.maxR[i]=30;
-					wave.color[i]="255,255,255";
+					wave.maxR[j]=30;
+					wave.color[j]="255,255,255";
 				}else{
-					this.maxR[i]=100;
-					this.color[i]="255,125,0";
+					this.maxR[j]=100;
+					this.color[j]="255,125,0";
 				}
-				this.alive[i]=true;
+				this.alive[j]=true;
 				break;
 			}
 		}

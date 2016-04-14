@@ -73,7 +73,7 @@ babyObj.prototype.change=function(){
 		this.bodyNum++;
 		if(this.bodyNum>19){
 			this.bodyNum=19;
-			gameOver=true;
+			//gameOver=true;
 			
 		}
 		this.bodyTimer=0;
