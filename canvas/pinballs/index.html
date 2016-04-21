@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>多彩弹球</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			border: 0;
+		}
+		#canvas{
+			position: absolute;
+			top: 200px;
+			left: 0;
+			right: 0;
+			margin:auto;
+			border:1px solid #ccc;
+		}
+		#button{
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 50px;
+			margin:auto;
+			text-align: center;
+		}
+		#button > input{
+			background-color:#AD0D0D;
+			color:#fff;
+			padding-left: 10px;
+			padding-right: 10px;
+			height: 50px;
+			line-height: 50px;
+			font-size: 1.5em;
+			margin:10px;
+		}
+		#style{
+			position: absolute;
+			top:100px;
+			left: 0;
+			right: 0;
+			margin:auto;
+			font-size: 2em;
+			text-align: center;
+		}
+	</style>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<div id="style"></div>
+	<div id="button">
+		<input type="button" value="改变样式" onclick="changeStyle();"></div>
+</body>
+</html>
