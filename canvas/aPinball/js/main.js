@@ -2,7 +2,7 @@ var can;
 var ctx;
 var boll;
 window.onload=function(){
-	can=document.getElementById('canvas');alert(can);
+	can=document.getElementById('canvas');
 	ctx=can.getContext('2d');
 	boll={x:400,y:100,r:10,g:2,vx:-3,vy:0,color:"blue"};
 	drawBoll();
