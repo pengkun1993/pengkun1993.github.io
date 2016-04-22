@@ -1,0 +1,53 @@
+﻿1、Alignment 自动对齐插件
+2、colorpicker 按Ctrl+Shift+C(默认，如果和其他键冲突则需要修改)就会弹出调色板，用来选取颜色值
+3、css format css 格式化插件：自定义快捷键
+
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~分割线~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	
+			[
+			{
+				"keys": ["ctrl+shift+f"],
+				"command": "css_format",
+				"args": {
+					"action": "expand"
+				}
+			},
+			{
+				"keys": ["ctrl+shift+z"],
+				"command": "css_format",
+				"args": {
+					"action": "compact-bs-ns"
+				}
+			}
+			]
+
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~分割线~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4、emmet tab键快捷输出
+
+5、git
+
+6、Tag html格式化插件
+
+7、jsformat js格式化插件
+
+8、sidebarEnhancements 侧栏功能添加插件
+
+9、一般代码提示类的文件加一个snippets
+
+10、modific高亮与git中版本修改的地方
+
+11、pyv8没有该插件emmet无法运行，一般安装emmet会自动安装pyv8
+
+12、goto anything 自带的功能，快捷键ctrl能快速在项目中查找某个文件或字段，@
+
+13、在命令行中输入js或别的文件模式可以规定一个文件的默认样式
+
+14、advanceNewfile 新建文件：
+
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~新建文件快捷键~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+		{ "keys": ["alt+z"], "command": "advanced_new_file_new"}
+
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~新建文件快捷键~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+15、docblockr快速添加注释
