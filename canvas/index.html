@@ -8,20 +8,52 @@
 			padding: 0;
 			border:0;
 			margin: 0;
+			text-decoration: none;
+		}
+		html,body{
+			width: 100%;
+			height: 100%;
+		}
+		h1{
+			text-align: center;
+
+		}
+		.canvas{
+			 position: relative;
+			 top: 0;
+			 left: 0;
+			 right: 0;
+			 margin:auto;
+			 text-align: center;
+			 width: 100%;
+			 height: 100%;
+		}
+		.canvas > h1{
+			font-size: 4em;
+			margin-bottom: 20px;
+		}
+		.href > a{
+			padding:5px 20px;
+			background-color: #000;
+			color:#fff;
+			font-size: 2em;
+			border-radius: 2em;
+			margin:10px;
 		}
 	</style>
 </head>
 <body>
-	<div class="canvas">
-		<ul>
-			<li><a href="pinballs">一个跳球</a></li>
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
-		</ul>
-	</div>
+	<section class="canvas">
+		<h1>canvas</h1>
+		<div class="href">
+			<a href="pinballs">一个跳球</a>
+			<a href="aPinball">玻璃弹球</a>
+			<a href="clock">时钟</a>
+			<a href="cuntdown_clock">倒计时</a>
+			<a href="night_sky">夜空</a>
+			<a href="search_light">探照灯</a>
+			<a href="test">测试知识点</a>
+		</div>
+	</section>
 </body>
 </html>
