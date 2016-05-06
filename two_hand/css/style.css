@@ -10,6 +10,14 @@ body{
 	background:#fff;
 	font-family: 'Lato', sans-serif;
  }
+*{
+	padding: 0;
+	margin:0;
+	border:0;
+}
+a,li{
+	text-decoration: none;
+}
 body a{
 	transition:0.5s all;
 	-webkit-transition:0.5s all;
@@ -727,6 +735,10 @@ vertical-align:middle;
 	text-align: center;
 	height: 80px;
 	line-height: 80px;
+	margin:50px auto;
+	font-weight: 700;
+	text-transform: uppercase;
+	color:red;
 }
 .callbacks_nav {
   position: absolute;
@@ -803,6 +815,11 @@ font-weight:400;
 .product-id{
 margin-top:3em;
 }
+.product-id input{
+	width: 30px;
+	margin-left:10px;
+	text-align: center;
+}
 .product-id h4{
 background:#d1d1d1;
 padding:0.7em;
@@ -824,12 +841,16 @@ color:#cd8d23;
 }
 a.add{
 color:#fff;
-background:#1a1818;
+background:red;
 padding:0.7em;
 text-decoration:none;
 display:block;
 margin-top:6em;
 text-align:center;
+font-weight: bold;
+letter-spacing: 2px;
+width: 60%;
+margin:6em auto;
 }
 a.add:hover{
 color:#1a1818;
@@ -853,6 +874,18 @@ color: #959595;
 font-size: 1em;
 line-height:1.5em;
 font-weight: 400;
+}
+.terms-sec-head p a{
+	display: inline-block;
+	width: 100px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: bold;
+	color:#fff;
+	margin-right: 50px;
+	background-color: #66D9EF;
 }
 .term{
 background:#fff;
