@@ -15,8 +15,8 @@ body{
 	margin:0;
 	border:0;
 }
-a,li{
-	text-decoration: none;
+a,li,a:link,a:visited,a:hover,a:active{
+text-decoration:none;
 }
 body a{
 	transition:0.5s all;
@@ -874,6 +874,7 @@ color: #959595;
 font-size: 1em;
 line-height:1.5em;
 font-weight: 400;
+text-align: center;
 }
 .terms-sec-head p a{
 	display: inline-block;
