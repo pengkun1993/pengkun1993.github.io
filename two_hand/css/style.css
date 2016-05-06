@@ -584,11 +584,13 @@ margin:3em 0 0 0;
 position:relative;
 padding:0;
 padding-right:1em;
+margin-bottom:2em;
 }
 .fashion-grid:hover div.product{
 display:none;
 }
 .fashion-grid a img{
+height: 400px;
 width:100%;
 position:relative;
 }
@@ -632,9 +634,6 @@ color:#2f2f2f;
 }
 .fashion-grid:hover div.fashion-view{
 display:block;
-}
-.fashion-grid2{
-margin-top:3em;
 }
 .product{
 position:absolute;
@@ -973,6 +972,9 @@ height: 450px;
 .registration-form,.login{
 background: #efefef;
 padding: 3em 0;
+}
+.login{
+	height: 100vh;
 }
 .reg{
 margin-top:2em;
