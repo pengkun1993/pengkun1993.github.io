@@ -164,6 +164,7 @@ function drawGrid(){
 	ctx.stroke();
 
 	ctx.beginPath();
+	ctx.setLineDash([15,5]);
 	ctx.moveTo(3,3);
 	ctx.lineTo(can.width-3,can.height-3);
 
