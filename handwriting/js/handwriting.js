@@ -9,7 +9,7 @@ var lastTime=0;//上一次鼠标按下的时间
 var lastLineWidth=30;//上一次笔尖宽度
 
 //定义笔尖效果的一些值
-var maxLineWidth=30;//最粗
+var maxLineWidth=Math.round($(window).width()*0.02);//最粗
 var minLineWidth=1;//最细
 var maxV=10;//最大笔尖速度
 var minV=1;//最小笔尖速度
@@ -22,6 +22,7 @@ $(function(){
 	can.width=canW;
 	can.height=canH;
 	$(".controller").css('width',canW+'px');
+
 	//绘制田字格
 	 drawGrid();
 	//清空面板
@@ -50,7 +51,7 @@ $(function(){
 	}
 	can.onmousemove=function (e) {
 		e.preventDefault();
-		moveStroke({x:e.clientX,x:e.clientY});
+		moveStroke({x:e.clientX,y:e.clientY});
 	}
 	//触控事件
 	can.addEventListener('touchstart',function(e){
@@ -103,7 +104,6 @@ function calcLineWidth(t,s) {
  * @param  {[type]} linewidth 笔画宽度
  */
 function draw(last,cur,linewidth){
-	ctx.save();
 	ctx.beginPath();
 	ctx.moveTo(last.x,last.y);
 	ctx.lineTo(cur.x,cur.y);
