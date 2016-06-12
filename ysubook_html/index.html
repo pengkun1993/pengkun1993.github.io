@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js/jquery.min.js"></script>
+	<!-- Custom Theme files -->
+	<!--theme-style-->
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<!--//theme-style-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="application/x-javascript"> 
+	addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+</script>
+	<!-- start menu -->
+	<link href="css/memenu.css" rel="stylesheet" type="text/css" media="all" />
+	<script type="text/javascript" src="js/memenu.js"></script>
+	<script>$(document).ready(function(){$(".memenu").memenu();});</script>
+	<script src="js/simpleCart.min.js"></script>
+</head>
+<body>
+	<!--header-->
+	<div class="header">
+		<div class="header-top">
+			<div class="container">
+				<div class="search">
+					<form>
+						<input type="text" value="" placeholder="搜索">
+						<input type="submit" value="Go"></form>
+				</div>
+				<div class="header-left">
+					<ul>
+						<li >
+							<a href="login.html"  >登录</a>
+						</li>
+						<li>
+							<a  href="register.html"  >注册</a>
+						</li>
+
+					</ul>
+					<div class="cart box_1">
+						<a href="checkout.html">
+							<h3>
+								<img src="images/cart.png" alt=""/>
+							</h3>
+						</a>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="head_nav">
+			<div class="container">
+				<div class="head-top">
+					<div class="logo">
+						<a href="index.html">
+							<img src="images/logo.png" alt=""></a>
+					</div>
+					<div class=" h_menu4">
+						<ul class="memenu skyblue">
+							<li class="active grid">
+								<a class="color8" href="index.html">首页</a>
+							</li>
+							<li>
+								<a class="color1" href="#">教材</a>
+							</li>
+							<li class="grid">
+								<a class="color2" href="#">教辅</a>
+							</li>
+							<li>
+								<a class="color4" href="blog.html">论坛</a>
+							</li>
+							<li>
+								<a class="color6" href="contact.html">联系我们</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="banner">
+		<div class="container">
+			<script src="js/responsiveslides.min.js"></script>
+			<script>
+			$(function () {
+			  $("#slider").responsiveSlides({
+			  	auto: true,
+			  	nav: true,
+			  	speed: 500,
+			    namespace: "callbacks",
+			    pager: true,
+			  });
+			});
+			</script>
+			<div  id="top" class="callbacks_container">
+				<ul class="rslides" id="slider">
+					<li>
+						<div class="banner-text">
+							<h3>新上书籍</h3>
+							<p>最新书籍，由毕业学姐学长整理提供，价格优惠，书籍较新，数量有限，抓住机会！</p>
+							<a href="single.html">查看详情</a>
+						</div>
+						<img src="images/b1.jpg" alt=""></li>
+					<li>
+						<div class="banner-text">
+							<h3>热卖书籍</h3>
+							<p>
+								由燕书阁勤劳的燕大小伙伴整理提供，为大家分类整理，找出购买量交大的书籍，由燕书阁自购自营，信誉保证，优惠多多，赶紧来看看吧
+							</p>
+							<a href="single.html">查看详情</a>
+						</div>
+						<img src="images/b2.jpg" alt=""></li>
+					<li>
+						<div class="banner-text">
+							<h3>毕业学长学姐出售</h3>
+							<p>
+								又是一年毕业季，有是一年离别季！毕业的学长学姐给我们带来知识的课本，这里有他们4年积累的知识，在这里交于学弟学妹，祝愿大家明天更美好。速度围观，可能遇到直系前辈，通通送你哦！
+							</p>
+							<a href="single.html">查看详情</a>
+						</div>
+						<img src="images/b3.jpg" alt=""></li>
+					<li>
+						<div class="banner-text">
+							<h3>精选一周热门帖子</h3>
+							<p>
+								燕园热点、国内燕大、社团近况、身边小伙伴的精品语段等等，你感兴趣的燕大热门都在这里，闲下来的时候进来逛逛。身在燕大，心系燕大！
+							</p>
+							<a href="single.html">查看详情</a>
+						</div>
+						<img src="images/b4.jpg" alt=""></li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+	<div class="copyrights">
+		Collect from
+		<a href="http://www.cssmoban.com/" >网页模板</a>
+	</div>
+	<!--content-->
+	<div class="content">
+		<div class="container">
+			<div class="content-top">
+				<h1>新书速递</h1>
+				<div class="grid-in">
+					<div class="col-md-4 grid-top">
+						<a href="single.html" class="b-link-stripe b-animate-go  thickbox">
+							<img class="img-responsive" src="images/n1.jpg" alt="">
+							<div class="b-wrapper">
+								<h3 class="b-animate b-from-left b-delay03 ">
+									<span>概率论与数理统计</span>
+									<span>￥3.00</span>
+								</h3>
+							</div>
+						</a>
+						<p>
+							<a href="single.html">加入购物车</a>
+						</p>
+					</div>
+					<div class="col-md-4 grid-top">
+						<a href="single.html" class="b-link-stripe b-animate-go  thickbox">
+							<img class="img-responsive" src="images/n2.jpg" alt="">
+							<div class="b-wrapper">
+								<h3 class="b-animate b-from-left    b-delay03 ">
+									<span>Shoe</span>
+								</h3>
+							</div>
+						</a>
+						<p>
+							<a href="single.html">classical Latin</a>
+						</p>
+					</div>
+					<div class="col-md-4 grid-top">
+						<a href="single.html" class="b-link-stripe b-animate-go  thickbox">
+							<img class="img-responsive" src="images/n3.jpg" alt="">
+							<div class="b-wrapper">
+								<h3 class="b-animate b-from-left    b-delay03 ">
+									<span>Bag</span>
+								</h3>
+							</div>
+						</a>
+						<p>
+							<a href="single.html">undoubtable</a>
+						</p>
+					</div>
+					<div class="col-md-4 grid-top">
+						<a href="single.html" class="b-link-stripe b-animate-go  thickbox">
+							<img class="img-responsive" src="images/n4.jpg" alt="">
+							<div class="b-wrapper">
+								<h3 class="b-animate b-from-left    b-delay03 ">
+									<span>Shirt</span>
+								</h3>
+							</div>
+						</a>
+						<p>
+							<a href="single.html">suffered alteration</a>
+						</p>
+					</div>
+					<div class="col-md-4 grid-top">
+						<a href="single.html" class="b-link-stripe b-animate-go  thickbox">
+							<img class="img-responsive" src="images/n5.jpg" alt="">
+							<div class="b-wrapper">
+								<h3 class="b-animate b-from-left    b-delay03 ">
+									<span>Bag</span>
+								</h3>
+							</div>
+						</a>
+						<p>
+							<a href="single.html">Content here</a>
+						</p>
+					</div>
+					<div class="col-md-4 grid-top">
+						<a href="single.html" class="b-link-stripe b-animate-go  thickbox">
+							<img class="img-responsive" src="images/n6.jpg" alt="">
+							<div class="b-wrapper">
+								<h3 class="b-animate b-from-left    b-delay03 ">
+									<span>Shoe</span>
+								</h3>
+							</div>
+						</a>
+						<p>
+							<a href="single.html">readable content</a>
+						</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+
+			<div class="content-top-bottom">
+				<h2>燕园热闻</h2>
+				<div class="col-md-6 men">
+					<a href="single.html" class="b-link-stripe b-animate-go  thickbox">
+						<img class="img-responsive" src="images/t1.jpg" alt="">
+						<div class="b-wrapper">
+							<h3 class="b-animate b-from-top top-in   b-delay03 ">
+								<span>Lorem</span>
+							</h3>
+						</div>
+					</a>
+
+				</div>
+				<div class="col-md-6">
+					<div class="col-md1 ">
+						<a href="single.html" class="b-link-stripe b-animate-go  thickbox">
+							<img class="img-responsive" src="images/t2.jpg" alt="">
+							<div class="b-wrapper">
+								<h3 class="b-animate b-from-top top-in1   b-delay03 ">
+									<span>Lorem</span>
+								</h3>
+							</div>
+						</a>
+
+					</div>
+					<div class="col-md2">
+						<div class="col-md-6 men1">
+							<a href="single.html" class="b-link-stripe b-animate-go  thickbox">
+								<img class="img-responsive" src="images/t3.jpg" alt="">
+								<div class="b-wrapper">
+									<h3 class="b-animate b-from-top top-in2   b-delay03 ">
+										<span>Lorem</span>
+									</h3>
+								</div>
+							</a>
+
+						</div>
+						<div class="col-md-6 men2">
+							<a href="single.html" class="b-link-stripe b-animate-go  thickbox">
+								<img class="img-responsive" src="images/t4.jpg" alt="">
+								<div class="b-wrapper">
+									<h3 class="b-animate b-from-top top-in2   b-delay03 ">
+										<span>Lorem</span>
+									</h3>
+								</div>
+							</a>
+
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="content-bottom">
+			<ul>
+				<li>
+					<a href="#">
+						<img class="img-responsive" src="images/lo3.png" alt=""></a>
+				</li>
+				<li>
+					<a href="#">
+						<img class="img-responsive" src="images/lo3.png" alt=""></a>
+				</li>
+				<li>
+					<a href="#">
+						<img class="img-responsive" src="images/lo3.png" alt=""></a>
+				</li>
+				<li>
+					<a href="#">
+						<img class="img-responsive" src="images/lo3.png" alt=""></a>
+				</li>
+				<li>
+					<a href="#">
+						<img class="img-responsive" src="images/lo3.png" alt=""></a>
+				</li>
+				<li>
+					<a href="#">
+						<img class="img-responsive" src="images/lo3.png" alt=""></a>
+				</li>
+				<div class="clearfix"></div>
+			</ul>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			<div class="footer-top-at">
+
+				<div class="col-md-4 amet-sed">
+					<h4>联系我们</h4>
+					<ul class="nav-bottom">
+						<li>
+							<a>电话：0310-12354678</a>
+						</li>
+						<li>
+							<a>地址：河北省秦皇岛市燕山大学</a>
+						</li>
+						<li>
+							<a href="contact.html">联系客服</a>
+						</li>
+						<li>
+							<a href="#">售后</a>
+						</li>
+						<li>
+							<a href="#">常见问题</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-4 amet-sed ">
+					<h4>关于我们</h4>
+
+					<p>我们的梦：</p>
+					<p>打造一个方便大家，节约资源的实用性网站</p>
+					<p>如果你也有这样的想法，加入我们吧！</p>
+					<!-- <ul class="social">
+						<li>
+							<a href="#"> <i></i>
+							</a>
+						</li>
+						<li>
+							<a href="#"> <i class="twitter"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="rss"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="gmail"></i>
+							</a>
+						</li>
+					
+					</ul> -->
+				</div>
+				<div class="col-md-4 amet-sed">
+					<!-- <h4>Newsletter</h4>
+					<p>
+						Sign Up to get all news update
+					and promo
+					</p>
+					<form>
+						<input type="text" value="" onFocus="this.value='';" onBlur="if (this.value == '') {this.value ='';}">
+						<input type="submit" value="Sign up"></form> -->
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="footer-class">
+			<p >
+				 &copy;
+				<a href="#">燕书阁</a>
+			</p>
+		</div>
+	</div>
+</body>
+</html>
