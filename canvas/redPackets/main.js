@@ -3,8 +3,8 @@ var canh=window.innerHeight>800 ? 800 : window.innerHeight;
 var can;
 var ctx;
 var image=new Image();
-var radio=80;
-var clipg={x:Math.random()*(canw-2*radio)+radio,y:Math.random()*(canh-2*radio)+radio,r:radio};
+var radius=40;
+var clipg={x:Math.random()*(canw-2*radius)+radius,y:Math.random()*(canh-2*radius)+radius,r:radius};
 var timer;
 window.onload=function(){
 	can=document.getElementById('canvas');
@@ -33,9 +33,9 @@ function reset() {
 	if(timer){
 		clearInterval(timer);
 	}
-	clipg={x:200,y:200,r:radio};
-	clipg.x=Math.random()*(canw-2*radio)+radio;
-	clipg.y=Math.random()*(canh-2*radio)+radio;
+	clipg={x:200,y:200,r:radius};
+	clipg.x=Math.random()*(canw-2*radius)+radius;
+	clipg.y=Math.random()*(canh-2*radius)+radius;
 	drawCan();
 }
 function show(){
