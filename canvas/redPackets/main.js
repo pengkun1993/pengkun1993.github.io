@@ -1,9 +1,14 @@
-var canw=(window.innerWidth>600)? 600 : window.innerWidth;
-var canh=window.innerHeight>800 ? 800 : window.innerHeight;
+var canw=window.innerWidth>800 ? 600 : window.innerWidth;
+var canh=window.innerWidth>800 ? 800 : window.innerHeight;
 var can;
 var ctx;
 var image=new Image();
-var radius=40;
+var radius;
+if(window.innerWidth>600){
+	radius=40;
+}else{
+	radius=30;
+}
 var clipg={x:Math.random()*(canw-2*radius)+radius,y:Math.random()*(canh-2*radius)+radius,r:radius};
 var timer;
 window.onload=function(){
