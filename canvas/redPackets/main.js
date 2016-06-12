@@ -14,8 +14,10 @@ window.onload=function(){
 	can.height=canh;
 
 	image.src="img.jpg";
-
+	image.onload=function(){
+		
 	drawCan();
+	}
 }
 function drawCan(){
 	ctx.clearRect(0,0,canw,canh);
