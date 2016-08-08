@@ -1,10 +1,15 @@
 var beginTime=new Date("2016/07/10 0:0:0");
+var dday;
+var dhour;
+var dmin;
+var dsecond;
+var ourTime;
 window.onload=function(){
 	//获取各个元素节点
 	var page1=document.getElementById('page1');
 	var page2=document.getElementById('page2');
 	var page3=document.getElementById('page3');	
-
+	ourTime=document.getElementById('ourTime');
 	var music=document.getElementById('music');
 	var audio=document.getElementsByTagName('audio')[0];
 	//设置点击碟片图标开始暂停音乐
@@ -31,10 +36,11 @@ window.onload=function(){
 		page3.style.top="100%";
 		setTimeout(function(){
 			page2.setAttribute("class","page fadeOut");
-			page3.setAttribute("class","page fadeIn")
+			page3.setAttribute("class","page fadeIn");
+			loop();
 		},5000)
 	},false);
-	loop();
+	
 }
 window.requestAnimFrame = (function() {
 	return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
@@ -46,5 +52,13 @@ function loop() {
 	window.requestAnimFrame(loop);
 	var nowTime=new Date();
 	var chaTime=nowTime.getTime()-beginTime.getTime();
-	
+	chaTime=parseInt(chaTime/1000);
+	dday=parseInt(chaTime/(24*3600));
+	var eday=chaTime-dday*(24*3600);
+	dhour=parseInt(eday/3600);
+	var ehour=eday-dhour*3600;
+	dmin=parseInt(ehour/60);
+	dsecond=ehour-dmin*60;
+
+	ourTime.innerHTML="我们在一起<br/>"+dday+"天"+dhour+"小时"+dmin+"分钟"+dsecond+"秒了";
 }	
