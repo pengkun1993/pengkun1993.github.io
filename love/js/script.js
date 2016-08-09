@@ -4,6 +4,7 @@ var dhour;
 var dmin;
 var dsecond;
 var ourTime;
+var timer1;
 window.onload=function(){
 	//获取各个元素节点
 	var page1=document.getElementById('page1');
@@ -37,10 +38,13 @@ window.onload=function(){
 		setTimeout(function(){
 			page2.setAttribute("class","page fadeOut");
 			page3.setAttribute("class","page fadeIn");
-			loop();
-		},5000)
+			writeLetter();
+		},5000);
+
 	},false);
 	
+	
+	loop();
 }
 window.requestAnimFrame = (function() {
 	return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||

@@ -20,7 +20,7 @@
 	<div class="page" id="page1">
 		<div class="bg"></div>
 		<div class="p1_lantern"></div>
-		<div class="ilike">送给亲爱的媳妇儿<br /> 你可以碰一下我爱你的心</div>
+		<div class="ilike">送给亲爱的媳妇儿<br /> 碰一碰我爱你的心</div>
 		<div class="p1_imooc"></div>
 		<div class="p1_words">爱你宝贝儿</div>
 	</div>
@@ -32,14 +32,14 @@
 	</div>
 	<div class="page" id="page3">
 		<div class="bg"></div>
-		<div class="p3_word typewriter">亲爱的媳妇儿，谢谢你一次又一次原谅笨笨的我，我会好好努力，努力更好的爱你，希望我们能天长地久————爱你的老公，坤</div>
+		<div class="p3_word typewriter">亲爱的媳妇儿，遇见你是我最大的幸运，谢谢你一次又一次原谅笨笨的我，我会好好努力，努力更好的爱你，我们一定要天长地久——爱你的老公，坤</div>
 		<div class="total_time" id="ourTime"></div>
 		<div class="p3_left"></div>
 		<div class="p3_right"></div>
 	</div>
 	<!-- 模拟打字 -->
 	<script>
-     (function(){
+     function writeLetter(){
        var typewriter=document.querySelector(".typewriter"),
        code=typewriter.innerHTML,
        pos=0,
@@ -68,7 +68,7 @@
          }
        }
        typewriting();
-     })();
+     };
 
   </script>
 </body>
