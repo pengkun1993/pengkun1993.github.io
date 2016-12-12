@@ -2,8 +2,8 @@ var can1;
 var ctx1;
 var can2;
 var ctx2;
-var canw=800;
-var canh=600;
+var canw=window.innerWidth/2*0.95;
+var canh=window.innerHeight*0.75;
 var image=new Image();
 window.onload=function(){
 	can1=document.getElementById('can1');
