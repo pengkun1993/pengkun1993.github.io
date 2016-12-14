@@ -1,0 +1,10 @@
+$(function(){
+	//fullpage插件设置
+	$('#fullpage').fullpage({
+		resize:true,
+		navigation:true,
+		navigationPosition:'right',
+		navigationColor:"#fff",
+		scrollOverflow:true,
+	});
+});

@@ -33,7 +33,7 @@
 8、sidebarEnhancements 侧栏功能添加插件
 
 9、一般代码提示类的文件加一个snippets
-
+aaa
 10、modific高亮与git中版本修改的地方
 
 11、pyv8没有该插件emmet无法运行，一般安装emmet会自动安装pyv8

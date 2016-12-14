@@ -3,56 +3,93 @@
 <head>
 	<meta charset="UTF-8">
 	<title>个人博客</title>
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="css/fullpage.min.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+	<!-- js -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="js/iScroll.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fullpage.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
-	<div id="page-wrapper">
-	<!--header-->
-		<header id="header" class="alt">
-			<h1>
-				<a href="index.html">坤小窝</a>
-			</h1>
-			<nav id="nav">
-				<ul>
-					<li class="special">
-						<a href="#menu" class="menuToggle">
-							<span>Menu</span>
-						</a>
-					</li>
-					<li class="special">
-						<a href="#tel" class="menuToggle">
-							<span>Tel</span>
-						</a>
-					</li>
-					<li class="special">
-						<a href="#QQ" class="menuToggle">
-							<span>QQ</span>
-						</a>
-					</li>
-				</ul>
-			</nav>
-			<div style="clear:both;">
-			</div>
-		</header>
-	<!--banner-->
-		<section id="banner">
+<!--header-->
+	<header id="header" class="alt">
+		<h1>
+			<a href="index.html">坤小窝</a>
+		</h1>
+		<nav id="nav">
+			<ul>
+				<li class="special">
+					<a href="#menu" class="menuToggle">
+						<span>Menu</span>
+					</a>
+				</li>
+				<li class="special">
+					<a href="#tel" class="menuToggle">
+						<span>Tel</span>
+					</a>
+				</li>
+				<li class="special">
+					<a href="#QQ" class="menuToggle">
+						<span>QQ</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<div style="clear:both;">
+		</div>
+	</header>
+<!--content-->
+<div id="fullpage" style="width:100%;height: 100%;">
+	<div class="section">
+		<div id="one" class="wrapper">
 			<div class="inner">
 				<h2>坤小窝</h2>
 				<p>爱学习爱生活爱旅游</p>
-				<ul class="actions">
-					<li><a href="#" class="button special">了解我</a></li>
-				</ul>
+				<div class="actions"><a href="#" class="button special">了解我</a>
+				</div>
 			</div>
-			<a href="#one" class="more scrolly">更多</a>
-		</section>
-		<section id="one" class="wrapper">
-			<div class="inner">
-				<header class="major"></header>
-			</div>
-		</section>
-		<section id="two" class="wrapper"></section>
-		<section id="three" class="wrapper"></section>
-		<section id="four" class="wrapper"></section>
+		</div>
 	</div>
+	<div class="section">
+		<div id="two" class="wrapper">
+		<div class="inner">
+			<h1>canvas</h1>
+			<h2>canvas学习效果展示</h2>
+			<div class="list">
+				<ul>
+					<li><span class=""><i class=" icon-bell"></i></span><a href="">动画动画</a></li>
+					<li><span class=""><i class=" icon-bell"></i></span><a href="">动画动画</a></li>
+					<li><span class=""><i class=" icon-bell"></i></span><a href="">动画动画</a></li>
+					<li><span class=""><i class=" icon-bell"></i></span><a href="">动画动画</a></li>
+					<li><span class=""><i class=" icon-bell"></i></span><a href="">动画动画</a></li>
+					<li><span class=""><i class=" icon-bell"></i></span><a href="">动画动画</a></li>
+					<li><span class=""><i class=" icon-bell"></i></span><a href="">动画动画</a></li>
+				</ul>
+				<div class="clear_float"></div>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="section">
+		<div id="three" class="wrapper">
+			<div class="inner">
+				<h1>网页特效</h1>
+				<h2>效果展示，效果展示，效果展示，效果展示，效果展示，效果展示，</h2>
+				<div class="list">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section">
+		<div id="four" class="wrapper">
+			
+		</div>
+	</div>
+</div>
 </body>
 </html>
