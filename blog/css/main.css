@@ -65,6 +65,20 @@ html,body{
 }
 .wrapper .inner{
 	padding-top: 50px;
+	color:#fff;
+}
+.wrapper .inner h1{
+	width: 50%;
+	text-align: center;
+	margin:50px auto 20px;
+	font-size: 1.5em;
+	border-bottom:3px #fff solid;
+	padding-bottom: 20px;
+}
+.wrapper .inner h2{
+	width: 50%;
+	text-align: center;
+	margin:20px auto;
 }
 /*one*/
 #one{
@@ -109,18 +123,8 @@ html,body{
 #two{
 	background-color: #1cb57b;
 }
-#two .inner h1{
-	width: 60%;
-	margin: auto;
-	padding-top: 50px;
-	padding-bottom: 20px;
-	font-size: 2em;
-	text-align: center;
-	border-bottom: 3px solid #bbb9b9;
-}
-#two .inner h2{
-	text-align: center;
-	margin-top: 20px;
+#two .inner{
+	color:#000;
 }
 #two .inner .list{
 	width: 1000px;
@@ -166,22 +170,6 @@ html,body{
 #three{
 	background-color: #611e61;
 }
-#three .inner h1{
-	font-size: 1.8em;
-	text-align: center;
-	width: 50%;
-	border-bottom: 3px solid #fff;
-	margin: 50px auto 20px;
-	padding-bottom: 20px;
-	color:#fff;
-}
-#three .inner h2{
-	width: 50%;
-	margin:auto;
-	text-align: center;
-	color:#fff;
-	font-size: 1em;
-}
 #three .inner .list{
 	width: 70%;
 	margin:50px auto 300px;
@@ -217,17 +205,4 @@ html,body{
 }
 #four .inner{
 	color:#fff;
-}
-#four .inner h1{
-	width: 50%;
-	margin: 50px auto 20px;
-	text-align: center;
-	font-size: 1.5em;
-	border-bottom:3px #fff solid;
-	padding-bottom: 20px;
-}
-#four .inner h2{
-	width:50%;
-	margin: 20px auto;
-	text-align: center;
 }
