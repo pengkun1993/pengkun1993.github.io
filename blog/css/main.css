@@ -169,16 +169,65 @@ html,body{
 #three .inner h1{
 	font-size: 1.8em;
 	text-align: center;
-	width: 80%;
+	width: 50%;
 	border-bottom: 3px solid #fff;
 	margin: 50px auto 20px;
 	padding-bottom: 20px;
 	color:#fff;
 }
 #three .inner h2{
-	width: 60%;
+	width: 50%;
 	margin:auto;
 	text-align: center;
 	color:#fff;
 	font-size: 1em;
+}
+#three .inner .list{
+	width: 70%;
+	margin:50px auto 300px;
+}
+#three .inner .list li{
+	width: 50%;
+	height: 300px;
+	float: left;
+	overflow: hidden;
+}
+#three .inner .list li p:first-of-type{
+	height: 80px;
+	line-height: 80px;
+	font-size: 30px;
+	font-weight: bold;
+	color:#fff;
+}
+#three .inner .list li p:last-of-type{
+	color: #fff;
+	text-indent: 30px;
+	width:80%;
+	height: 180px;
+	margin:auto;
+	overflow: hidden;
+}
+#three .inner .list li p i{
+	color:#0bfb0b;
+	margin:auto 30px;
+}
+/*four*/
+#four{
+	background-color: rgba(0,0,0,0.8);
+}
+#four .inner{
+	color:#fff;
+}
+#four .inner h1{
+	width: 50%;
+	margin: 50px auto 20px;
+	text-align: center;
+	font-size: 1.5em;
+	border-bottom:3px #fff solid;
+	padding-bottom: 20px;
+}
+#four .inner h2{
+	width:50%;
+	margin: 20px auto;
+	text-align: center;
 }
