@@ -1,91 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="Zh-cn">
 <head>
 	<meta charset="UTF-8">
-	<title>Canvas</title>
-	<style type="text/css">
-		*{
-			padding: 0;
-			border:0;
-			margin: 0;
-			text-decoration: none;
-		}
-		.section{
-			 position: relative;
-			 top: 0;
-			 left: 0;
-			 right: 0;
-			 margin:20px auto;
-			 text-align: center;
-		}
-		.section > h1{
-			font-size: 4em;
-			margin-bottom: 20px;
-			color:#8E2121;
-		}
-		.href > a{
-			padding:15px 40px;
-			background-color: #000;
-			color:#fff;
-			font-size: 2em;
-			border-radius: 2em;
-			margin:10px 20px;
-			float: left;
-		}
-	</style>
+	<meta name="viewport" content="width=device-width,height=device-width,initial-scale=1,user-scalable=no">
+	<title>个人博客</title>
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="blog/css/fullpage.min.css">
+	<link rel="stylesheet" type="text/css" href="blog/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="blog/css/main.css">
+	<!-- js -->
+	<script type="text/javascript" src="blog/js/jquery.min.js"></script>
+	<script type="text/javascript" src="blog/js/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="blog/js/iScroll.min.js"></script>
+	<script type="text/javascript" src="blog/js/jquery.fullpage.min.js"></script>
+	<script type="text/javascript" src="blog/js/main.js"></script>
 </head>
 <body>
-	<section class="section">
-		<h1>canvas</h1>
-		<div class="href">
-			<a target="_blank" href="canvas/pinballs/index.html">玻璃弹球</a>
-			<a target="_blank" href="canvas/aPinball/index.html">一个跳球</a>
-			<a target="_blank" href="canvas/clock/index.html">时钟</a>
-			<a target="_blank" href="canvas/countdown_clock/index.html">倒计时</a>
-			<a target="_blank" href="canvas/night_sky/index.html">夜空</a>
-			<a target="_blank" href="canvas/search_light/index.html">探照灯</a>
-			<a target="_blank" href="canvas/test/index.html">测试知识点</a>
-			<a target="_blank" href="canvas/fishGame/index.html">爱心鱼游戏</a>
-			<a target="_blank" href="canvas/handwriting/index.html">写字</a>
-			<a target="_blank" href="canvas/starGirl/index.html">星星女孩儿</a>
-			<a target="_blank" href="canvas/drawImage/image_base/index.html">基础图像</a>
-			<a target="_blank" href="canvas/drawImage/image_data/index.html">图像透镜</a>
-			<a target="_blank" href="canvas/drawImage/image_scale/index.html">图像放大</a>
-			<a target="_blank" href="canvas/drawImage/image_magnifire/index.html">图像放大镜</a>
-			<a target="_blank" href="canvas/redPackets/index.html">红包模糊图片</a>
-			<div style="clear:both;"></div>
+<!--header-->
+	<header id="header" class="alt">
+		<h1>
+			<a href="index.html">坤の博</a>
+		</h1>
+		<nav id="nav">
+			<ul>
+				<li class="special">
+					<a href="#menu" class="menuToggle">
+						<span>Menu</span>
+					</a>
+				</li>
+				<li class="special">
+					<a href="#tel" class="menuToggle">
+						<span>Tel</span>
+					</a>
+				</li>
+				<li class="special">
+					<a href="#QQ" class="menuToggle">
+						<span>QQ</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<div style="clear:both;">
 		</div>
-	</section>
-	<section class="section">
-		<h1>web</h1>
-		<div class="href">
-			<a target="_blank" href="blog/index.html">博客</a>
-			<div style="clear:both;"></div>
+	</header>
+<!--content-->
+<div id="fullpage" style="width:100%;height: 100%;">
+	<div class="section">
+		<div id="one" class="wrapper">
+			<div class="inner">
+				<h1>坤の博</h1>
+				<h2>这里你将看到坤在前端方面的学习过程，这里的内容我也会不断完善，将自己新学到的东西或者突发奇想的效果添加到这里，不断丰富它！<br/>
+				养肥了再吃~_~_~</h2>
+				<div class="actions"><a href="#" class="button special">了解我</a>
+				</div>
+			</div>
 		</div>
-	</section>
-	<section class="section">
-		<h1>DOM</h1>
-		<div class="href">
-			<a target="_blank" href="DOM/QQ/index.html">拖拽</a>
-			<a target="_blank" href="DOM/keyEvent/index.html">抽奖（键盘事件）</a>
-			<div style="clear:both;"></div>
+	</div>
+	<div class="section">
+		<div id="two" class="wrapper">
+		<div class="inner">
+			<h1>canvas</h1>
+			<h2>canvas学习效果展示</h2>
+			<div class="list">
+				<ul>
+				<!-- 一项栏目 -->
+					<li><a class="icon" target="_blank" href="canvas/pinballs/index.html"><i class=" icon-adjust"></i></a><a target="_blank" href="canvas/pinballs/index.html">玻璃弹球</a></li>
+				<!-- /一项栏目 -->
+				<!-- 一项栏目 -->
+					<li>
+						<a class="icon" target="_blank" href="canvas/aPinball/index.html"><i class=" icon-circle"></i></a>
+						<a target="_blank" href="canvas/aPinball/index.html">一个跳球</a>
+					</li>
+				<!-- 一项栏目 -->
+					<li>
+						<a class="icon" target="_blank" href="canvas/clock/index.html"><i class=" icon-time"></i></a>
+						<a target="_blank" href="canvas/clock/index.html">时钟</a>
+					</li>
+				<!-- 一项栏目 -->
+					<li>
+						<a class="icon" target="_blank" href="canvas/countdown_clock/index.html"><i class=" icon-time"></i></a>
+						<a target="_blank" href="canvas/countdown_clock/index.html">倒计时</a>
+					</li>
+				<!-- 一项栏目 -->
+					<li>
+						<a class="icon" target="_blank" href="canvas/night_sky/index.html"><i class=" icon-cloud"></i></a>
+						<a target="_blank" href="canvas/night_sky/index.html">夜空</a>
+					</li>
+				<!-- 一项栏目 -->
+					<li>
+						<a class="icon" target="_blank" href="canvas/search_light/index.html"><i class=" icon-circle-blank"></i></a>
+						<a target="_blank" href="canvas/search_light/index.html">探照灯</a>
+					</li>
+				<!-- 一项栏目 -->
+					<li>
+						<a class="icon" target="_blank" href="canvas/fishGame/index.html"><i class="  icon-heart"></i></a>
+						<a target="_blank" href="canvas/fishGame/index.html">爱心鱼游戏</a>
+					</li>
+				<!-- 一项栏目 -->
+					<li>
+						<a class="icon" target="_blank" href="canvas/handwriting/index.html"><i class="  icon-edit"></i></a>
+						<a target="_blank" href="canvas/handwriting/index.html">写字</a>
+					</li>
+				<!-- 一项栏目 -->
+					<li>
+						<a class="icon" target="_blank" href="canvas/starGirl/index.html"><i class=" icon-star"></i></a>
+						<a target="_blank" href="canvas/starGirl/index.html">星星女孩儿</a>
+					</li>
+				<!-- 一项栏目 -->
+					<li>
+						<a class="icon" target="_blank" href="canvas/drawImage/image_base/index.html"><i class=" icon-picture"></i></a>
+						<a target="_blank" href="canvas/drawImage/image_base/index.html">基础图像</a>
+					</li>
+				<!-- 一项栏目 -->
+					<li>
+						<a class="icon" target="_blank" href="canvas/drawImage/image_data/index.html"><i class="icon-eye-close"></i></a>
+						<a target="_blank" href="canvas/drawImage/image_data/index.html">图像透镜</a>
+					</li>
+				<!-- 一项栏目 -->
+					<li>
+						<a class="icon" target="_blank" href="canvas/drawImage/image_scale/index.html"><i class=" icon-eye-open"></i></a>
+						<a target="_blank" href="canvas/drawImage/image_scale/index.html">图像放大</a>
+					</li>
+				<!-- 一项栏目 -->
+					<li>
+						<a class="icon" target="_blank" href="canvas/drawImage/image_magnifire/index.html"><i class="icon-zoom-in"></i></a>
+						<a target="_blank" href="canvas/drawImage/image_magnifire/index.html">图像放大镜</a>
+					</li>
+				<!-- 一项栏目 -->
+					<li>
+						<a class="icon" target="_blank" href="canvas/redPackets/index.html"><i class="icon-zoom-in"></i></a>
+						<a target="_blank" href="canvas/redPackets/index.html">红包模糊图片</a>
+					</li>
+					
+				</ul>
+				<div class="clear_float"></div>
+			</div>
 		</div>
-	</section>
-	<section class="section">
-		<h1>Animation</h1>
-		<div class="href">
-			<a target="_blank" href="animation/figureMove/index.html">图片特效</a>
-			
-			<a target="_blank" href="animation/square.html">旋转方块儿</a>
-			<div style="clear:both;"></div>
 		</div>
-	</section>
-	<section class="section">
-		<h1>Phone</h1>
-		<div class="href">
-			<a target="_blank" href="phone/spring/index.html">贺春</a>
-			<div style="clear:both;"></div>
+	</div>
+	<div class="section">
+		<div id="three" class="wrapper">
+			<div class="inner">
+				<h1>网页特效</h1>
+				<h2>这里是通过JavaScript或相关的框架插件实现的一些网页特效</h2>
+				<div class="list">
+					<ul>
+					<!-- 一个方框 -->
+						<a target="_blank" href="web/QQ/index.html">
+							<li>
+								<p><i class="icon-comments-alt"></i><span>拖拽QQ面板</span></p>
+								<p>以QQ面板为例实现了鼠标的拖拽以及一些qq相关功能的鼠标事件</p>
+							</li>
+						</a>
+					<!-- 一个方框 -->
+						<a target="_blank" href="web/keyEvent/index.html">
+							<li>
+								<p><i class="icon-legal"></i><span>抽奖（键盘事件）</span></p>
+								<p>演示抽奖的功能，除却鼠标事件外，还可用键盘回车键进行操控</p>
+							</li>
+						</a>
+					<!-- 一个方框 -->
+						<a target="_blank" href="web/figureMove/index.html">
+							<li>
+								<p><i class="icon-picture"></i><span>图片展示特效</span></p>
+								<p>运用css3的特效功能，实现图片的特效展示</p>
+							</li>
+						</a>
+					<!-- 一个方框 -->
+						<a target="_blank" href="web/square.html">
+							<li>
+								<p><i class="icon-refresh"></i><span>旋转方块儿</span></p>
+								<p>运用html5+css3绘制一个正方形，并使它可以旋转</p>
+							</li>
+						</a>
+					
+					</ul>
+					<div class="clear_float"></div>
+				</div>
+			</div>
 		</div>
-	</section>
+	</div>
+	<div class="section">
+		<div id="four" class="wrapper">
+			<div class="inner">
+				<h1>手机端网页</h1>
+				<h2>网页展示，网页展示，网页展示，网页展示，网页展示，网页展示，</h2>
+			</div>	
+		</div>
+	</div>
+</div>
 </body>
 </html>
