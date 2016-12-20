@@ -35,12 +35,12 @@ $(function(){
 	});
 });
 function rotate_square(x,y){
-	var del_x=(x-start_x)%10;
-	var del_y=(y-start_y)%10;
+	var del_x=(x-start_x);
+	var del_y=(y-start_y);
 	
 	x_angel+=del_x;
 	y_angle+=del_y;
-	$('#square').css({'transform':'rotateY('+ x_angel +'deg) rotateX('+ -y_angle +'deg) '});
+	$('#square').css({'transform':'rotateY('+ x_angel +'deg) rotateX('+ y_angle +'deg) '});
 	start_x=x;
 	start_y=y;
 }
