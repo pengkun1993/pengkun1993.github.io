@@ -58,7 +58,7 @@ function rotate_square(x,y){
 	
 	x_angel+=del_x;
 	y_angle+=del_y;
-	$('#square').css({'transform':'rotateY('+ x_angel +'deg) rotateX('+ (-y_angle) +'deg) '});
+	$('#square').css({'transform':'rotateY('+ x_angel +'deg) rotateX('+ (-y_angle)  +'deg) '});
 	start_x=x;
-	start_y=y;
+	start_y=y;  
 }
