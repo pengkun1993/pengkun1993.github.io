@@ -1,0 +1,78 @@
+*{
+	padding:0;
+	margin:0;
+	border:none;
+	outline: 0;
+}
+#threeD{
+	perspective:2000px;
+	perspective-origin:50% 50%;
+}
+#square{
+	position: absolute;
+	top:200px;
+	left: 0;
+	right: 0;
+	width: 200px;
+	height: 200px;
+	margin:0 auto;
+	transition:transform 1s;
+	transform-origin: center center;
+	transform-style:preserve-3d;
+}
+/* #square:hover{
+	transition:transform 5s;
+	transform: rotate3d(1,1,1,360deg);
+} */
+.face{
+	position: absolute;
+	top:0;
+	left: 0;
+	right: 0;
+	margin:0;
+	width: 200px;
+	height: 200px;
+	background-color: blue;
+	opacity: .8;
+	font-size: 200px;
+	color:#fff;
+	line-height: 200px;
+	text-align: center;
+	border:1px solid #fff;
+}
+#face1{
+	transform-origin:bottom;
+	transform: translateZ(100px);
+}
+#face2{
+	transform-origin:left;
+	transform: translateZ(100px) rotateY(90deg);
+}
+#face4{
+	transform-origin:right;
+	transform: translateZ(100px) rotateY(-90deg);
+}
+#face3{
+	transform-origin:center top;
+	transform: translateZ(100px) rotateX(-90deg);
+}
+#face5{
+	transform-origin:center bottom;
+	transform: translateZ(100px) rotateX(90deg);
+}
+#face6{
+	transform-origin:center center length;
+	transform: translateZ(100px) translateZ(-200px);
+}
+#op{
+	position: absolute;
+	top:600px;
+	left: 0;
+	right: 0;
+	margin:auto;
+	width: 850px;
+}
+.range_control{
+	width: 800px;
+	margin:10px auto;
+}
