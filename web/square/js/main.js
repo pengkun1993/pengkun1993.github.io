@@ -33,6 +33,24 @@ $(function(){
 		e.preventDefault();
 		state=0;
 	});
+	document.addEventListener('touchstart',function(e){
+		e.preventDefault();
+		if(state==0){
+			state=1;
+			start_x=e.touches[0].pageX;
+			start_y=e.touches[0].pageY;
+		}
+	});
+	document.addEventListener('touchmove',function(e){
+		e.preventDefault();
+		if(state==1){
+			rotate_square(e.touches[0].pageX,e.touches[0].pageY);	
+		}
+	});
+	document.addEventListener('touchend',function(e){
+		e.preventDefault();
+		state=0;
+	});
 });
 function rotate_square(x,y){
 	var del_x=(x-start_x);
