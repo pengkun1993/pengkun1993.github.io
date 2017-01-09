@@ -14,11 +14,11 @@ window.onload=function(){
 	ourTime=document.getElementById('ourTime');
 	var music=document.getElementById('music');
 	var audio=document.getElementsByTagName('audio')[0];
-	if(!audio.paused){
+	/*if(!audio.paused){
 		page_load.style.display='none';
 		page_load.style.zIndex='-99';
 		page1.style.display='block';
-	}
+	}*/
 	//设置点击碟片图标开始暂停音乐
 	music.addEventListener("touchstart",function(event){
 		if(audio.paused){
