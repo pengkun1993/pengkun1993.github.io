@@ -7,12 +7,17 @@ var ourTime;
 var timer1;
 window.onload=function(){
 	//获取各个元素节点
+	var page_load=document.getElementById('page_load');
 	var page1=document.getElementById('page1');
 	var page2=document.getElementById('page2');
 	var page3=document.getElementById('page3');	
 	ourTime=document.getElementById('ourTime');
 	var music=document.getElementById('music');
 	var audio=document.getElementsByTagName('audio')[0];
+	if(!audio.paused){
+		page_load.style.display='none';
+		page1.style.display='block';
+	}
 	//设置点击碟片图标开始暂停音乐
 	music.addEventListener("touchstart",function(event){
 		if(audio.paused){
