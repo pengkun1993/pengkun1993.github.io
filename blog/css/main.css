@@ -28,6 +28,9 @@ html,body{
 	color:#fff;
 	font-size: 1.2em;
 }
+.navbar-collapse .navbar-nav li{
+	background-color: #2b2b2b;
+}
 /*content*/
 .wrapper{
 	width: 100%;
