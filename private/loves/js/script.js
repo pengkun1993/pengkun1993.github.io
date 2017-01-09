@@ -17,11 +17,11 @@ window.onload=function(){
 	music.addEventListener("touchstart",function(event){
 		if(audio.paused){
 			music.setAttribute("class","play");
-			//this.style.animationPlayState="running";
+			this.style.animationPlayState="running";
 			audio.play();
 		}else{
 			music.setAttribute("class","");
-			//this.style.animationPlayState="paused";
+			this.style.animationPlayState="paused";
 			audio.pause();
 		}
 	},false);
