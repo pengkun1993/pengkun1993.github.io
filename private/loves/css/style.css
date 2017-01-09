@@ -1,5 +1,5 @@
 /*all tag*/
-* { padding: 0; margin: 0; border: none; font-size: 1.5625vw; font-family: "楷体",Georgia,Serif; }
+* { padding: 0; margin: 0; border: none; font-size: 3vw; font-family: "楷体",Georgia,Serif; }
 html, body { height: 100%; overflow: hidden; }
 
 /*image*/
@@ -22,7 +22,7 @@ html, body { height: 100%; overflow: hidden; }
 #page1 { display: block; }
 #page1 > .bg { width: 100%; height: 100%; background: url('../images/p1_bg.jpg') no-repeat center center; background-size: 100%; position: absolute; z-index: -1; }
 
-#page1 > .p1_lantern { position: absolute; color: #fff; top: 20vh; left: 0; right: 0; margin: auto; height:20vh; width: 20vh; text-align: center;  box-sizing: border-box; font-size: 3.4rem; background:#D92952; 
+#page1 > .p1_lantern { position: absolute; color: #fff; top: 20vh; left: 0; right: 0; margin: auto; height:20vh; width: 20vh; text-align: center;  box-sizing: border-box; font-size: 3em; background:#D92952; 
 	-webkit-transform: rotate(45deg);  
     -moz-transform: rotate(45deg);  
     -ms-transform: rotate(45deg);  
@@ -48,7 +48,7 @@ html, body { height: 100%; overflow: hidden; }
 	100% { opacity: 1; }*/
 }
 #page1 .ilike{
-	position: absolute;right:0;top:50vh;left:0;margin:auto;text-align: center;font-size:26px;height: 6vh;line-height: 6vh;
+	position: absolute;right:0;top:50vh;left:0;margin:auto;text-align: center;font-size:2em;height: 6vh;line-height: 6vh;
 }
 #page1 > .p1_imooc { width: 20vh; height: 20vh; position: absolute;top:56vh; right: 0; bottom: 0; left: 0; margin: auto; background: url('../images/p1_imooc.png') no-repeat center center; background-size: 100%; }
 #page1 > .p1_words { position: absolute;top:90vh; right: 0; bottom: 0; left: 0; margin: auto; text-align: center; font-size: 2.5rem;height: 10vh;line-height: 10vh; }
@@ -99,7 +99,7 @@ html, body { height: 100%; overflow: hidden; }
 	left:0;
 	right: 0;
 	margin:auto;
-	font-size:26px;
+	font-size:2em;
 	color:#fff;
 	text-align: center;
 }
@@ -130,7 +130,7 @@ html, body { height: 100%; overflow: hidden; }
 	top:20vh;
 	left:0;
 	right: 0;
-	font-size: 28px;
+	font-size: 3em;
 	color:#00ffa3;
 	text-indent: 40px;
 	font-family: "KaiTi";
@@ -143,7 +143,7 @@ html, body { height: 100%; overflow: hidden; }
 	top:50vh;
 	left:0;
 	right: 0;
-	font-size: 32px;
+	font-size: 3.5em;
 	color:#fff;
 	text-align: center;
 	font-family: "KaiTi";
