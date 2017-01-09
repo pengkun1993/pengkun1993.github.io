@@ -16,6 +16,7 @@ window.onload=function(){
 	var audio=document.getElementsByTagName('audio')[0];
 	if(!audio.paused){
 		page_load.style.display='none';
+		page_load.style.zIndex='-99';
 		page1.style.display='block';
 	}
 	//设置点击碟片图标开始暂停音乐
