@@ -149,11 +149,11 @@ html, body { height: 100%; overflow: hidden; }
 	font-family: "KaiTi";
 }
 
-#page3 > .p3_left { position: absolute; left: 20vw; top:80vh;bottom: 0;  width: 20vw; height: 20vw; background: url('../images/p3_left.png') no-repeat center center; background-size: 100%; animation: p3_blessing 2s linear 1s infinite; -webkit-animation: p3_blessing 2s linear 1s infinite; border-radius: 50%}
+#page3 > .p3_left { position: absolute; left: 20vw; top:80vh;bottom: 0;  width: 25vw; height: 25vw; background: url('../images/p3_left.png') no-repeat center center; background-size: 100%; animation: p3_blessing 2s linear 1s infinite; -webkit-animation: p3_blessing 2s linear 1s infinite; border-radius: 50%}
 #page3 > .p3_center{
 	position: absolute;width: 20vw;height: 20vw;left: 0;right: 0;top: 80vh;bottom: 0;margin:auto;background: url('../images/heart.png') no-repeat center center;background-size: 100%;z-index: 99;
 }
-#page3 > .p3_right { position: absolute;  right: 20vw;top:80vh; bottom: 0;  width: 20vw; height: 20vw; background: url('../images/p3_right.png') no-repeat center center; background-size: 100%; animation: p3_blessing2 2s linear 1s infinite ; -webkit-animation: p3_blessing2 2s linear 1s infinite ; border-radius: 50%}
+#page3 > .p3_right { position: absolute;  right: 20vw;top:80vh; bottom: 0;  width: 25vw; height: 25vw; background: url('../images/p3_right.png') no-repeat center center; background-size: 100%; animation: p3_blessing2 2s linear 1s infinite ; -webkit-animation: p3_blessing2 2s linear 1s infinite ; border-radius: 50%}
 
 @keyframes p3_blessing {
 	0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
