@@ -151,7 +151,7 @@ html, body { height: 100%; overflow: hidden; }
 
 #page3 > .p3_left { position: absolute; left: 20vw; top:80vh;bottom: 0;  width: 15vh; height: 15vh; background: url('../images/p3_left.png') no-repeat center center; background-size: 100%; animation: p3_blessing 2s linear 1s infinite; -webkit-animation: p3_blessing 2s linear 1s infinite; border-radius: 50%}
 #page3 > .p3_center{
-	position: absolute;width: 10vh;height: 10vh;left: 0;right: 0;top: 80vh;bottom: 0;margin:auto;background: url('../images/heart.png') no-repeat center center;background-size: 100%;z-index: 99;
+	position: absolute;width: 15vh;height: 15vh;left: 0;right: 0;top: 80vh;bottom: 0;margin:auto;background: url('../images/heart.png') no-repeat center center;background-size: 100%;z-index: 99;
 }
 #page3 > .p3_right { position: absolute;  right: 20vw;top:80vh; bottom: 0;  width: 15vh; height: 15vh; background: url('../images/p3_right.png') no-repeat center center; background-size: 100%; animation: p3_blessing2 2s linear 1s infinite ; -webkit-animation: p3_blessing2 2s linear 1s infinite ; border-radius: 50%}
 
