@@ -79,6 +79,9 @@ $(function(){
 		
 		$('#begin_game').css({'z-index':'0','display':'none'});
 		$('canvas').css({'z-index':'1','display':'block'});
+		setTimeout(function(){
+			mainLoop();
+		},500);
 		
 	});
 	// 退出全屏游戏刷新
@@ -95,9 +98,7 @@ $(function(){
 	ctx.strokeStyle='#fff';
 	ctx.stroke();
 
-	setTimeout(function(){
-		mainLoop();
-	},2000);
+	
 
 	$(document).bind("keydown",function(e){ 
 		if(status==0){
@@ -111,18 +112,21 @@ $(function(){
 				case 39://右
 				break;
 			}
-			allindex++;
-			if(allindex<max_loop){
-				mainLoop();
-				status=0;
-			}else{
-				swal({
-					title:'测试结束',
-					type:'success',
-				},function(){
-					location.reload();
-				});
+			if(e.keyCode==37 || e.keyCode==38 || e.keyCode==39){
+				allindex++;
+				if(allindex<max_loop){
+					mainLoop();
+					status=0;
+				}else{
+					swal({
+						title:'测试结束',
+						type:'success',
+					},function(){
+						location.reload();
+					});
+				}
 			}
+			
 		}
 	});
 });
