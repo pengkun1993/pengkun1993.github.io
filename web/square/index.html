@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X_UA_Compatitle" content="chrom=1,IE=edge">
+	<meta name="formate_detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width,height=device-height,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<meta charset="UTF-8">
+	<title>旋转正方形</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<style type="text/css">
+	</style>
+	<script type="text/javascript">
+		/*var square;*/
+		/*滑动轴
+		window.onload=function(){
+			var square=document.getElementById('square');
+		}
+
+		
+		function rotate(){
+			var x=document.getElementById('rotatex').value;
+			var y=document.getElementById('rotatey').value;
+			var z=document.getElementById('rotatez').value;
+			var xspan=document.getElementById('xspan');
+			var yspan=document.getElementById('yspan');
+			var zspan=document.getElementById('zspan');
+			square.style.transform="rotateX("+x+"deg) rotateY("+y+"deg) rotateZ("+z+"deg)";
+			xspan.innerHTML=x;yspan.innerHTML=y;zspan.innerHTML=z;
+		}*/
+	</script>
+</head>
+<body>
+<div id="threeD">
+	<div id="square">
+		<div class="face" id="face1"><img src="image/bg.jpg" /></div>
+		<div class="face" id="face2"><img src="image/bg.jpg" /></div>
+		<div class="face" id="face3"><img src="image/bg.jpg" /></div>
+		<div class="face" id="face4"><img src="image/bg.jpg" /></div>
+		<div class="face" id="face5"><img src="image/bg.jpg" /></div>
+		<div class="face" id="face6"><img src="image/bg.jpg" /></div>
+	</div>
+</div><!-- 滑动轴
+<div id="op">
+	<p>x轴<span id="xspan">0</span>deg</p>
+	<input type="range" id="rotatex" class="range_control" min="-360" max="360" value="0" onchange="rotate()">
+	<p>y轴<span id="yspan">0</span>deg</p>
+	<input type="range" id="rotatey" class="range_control" min="-360" max="360" value="0" onchange="rotate()">
+	<p>z轴<span id="zspan">0</span>deg</p>
+	<input type="range" id="rotatez" class="range_control" min="-360" max="360" value="0" onchange="rotate()">
+</div> -->
+</body>
+</html>

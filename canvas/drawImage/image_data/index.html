@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>像素透镜</title>
+	<script type="text/javascript" src="main.js"></script>
+	<style type="text/css" media="screen">
+		*{
+			padding: 0;
+			border:0;
+			margin: 0;
+		}
+		#can1{
+			margin-left:20px;
+		}
+		#can1,#can2{
+			margin-top:50px;
+			border:1px solid #ccc;
+		}
+		.btna{
+			width: 100%;
+			text-align: center;
+			margin-top:50px;
+		}
+		h1{
+			width: 100%;
+			text-align:center;
+		}
+	</style>
+</head>
+<body>
+	<h1>各种透镜</h1>
+	<canvas id="can1">
+		您的浏览器不支持canvas画布
+	</canvas>
+	<canvas id="can2">
+		您的浏览器不支持canvas画布
+	</canvas>
+	<div class="btna">
+		<a href="javascript:redeffect()">去红</a>	
+		<a href="javascript:grayeffect()">变灰</a>	
+		<a href="javascript:blackeffect()">黑白</a>	
+		<a href="javascript:contraryeffect()">反色</a>	
+		<a href="javascript:blureffect()">模糊</a>	
+		<a href="javascript:mosaiceffect()">马赛克</a>	
+	</div>
+</body>
+</html>
