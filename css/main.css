@@ -46,10 +46,10 @@ ul li{
 	width: 60%;
 	line-height: 1.5em;
 }
-@media (max-width: 1024){
+@media (max-width: 1024px){
 	#two .inner h3{
-		margin-left: 10%;
-		width: 80%;
+		margin-left: 5%;
+		width: 90%;
 	}
 }
 #two .inner a{
