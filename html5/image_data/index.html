@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="U-XA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<title>像素操作</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			border: 0;
+			text-decoration: none;
+			outline: none;
+		}
+		html,body{
+			height: 100%;
+			width: 100%;
+		}
+		body{
+			background-color: #ccc;
+		}
+		.canvas{
+			position: absolute;
+			top: 5%;
+			background-color: #fff;
+			border-radius: 2%;
+			box-shadow: 0 0 20px #000;
+		}
+		#canvas1{
+			left:5%; 
+		}
+		#canvas2{
+			right: 5%;
+		}
+		.btn{
+			position: absolute;
+			top: 70%;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			height: 25%;
+			width: 60%;
+			text-align: center;
+		}
+		.btn button{
+			width: 20%;
+			margin-left: 4%;
+			margin-top: 5%;
+			height: 30%;
+			border-radius: 5%;
+			background-color: #5b45b3;
+			color: #fff;
+			box-shadow: 10px 10px 10px #000;
+			font-size: 1.5em;
+		}
+		@media (max-width: 1024px){
+			#canvas1{
+				top: 2%;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+			}
+			#canvas2{
+				top:35%;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+
+			}
+			.btn{
+				width: 80%;
+				height:30%;
+			}
+			.btn button{
+				width:25%;
+				height: 20%;
+				font-size: 1.2em;
+			}
+		}
+	</style>
+</head>
+<body>
+	<canvas id="canvas1" class="canvas"></canvas>
+	<canvas id="canvas2" class="canvas"></canvas>
+	<div class="btn">
+		<button onclick="removeColor('r')">去红</button>
+		<button onclick="removeColor('g')">去绿</button>
+		<button onclick="removeColor('b')">去蓝</button>
+		<button onclick="toGrey();">变灰</button>
+		<button onclick="inverseColor();">反色</button>
+		<button onclick="blackWhite();">黑白</button>
+		<button onclick="toBlur();">模糊</button>
+		<button onclick="toMosaic();">马赛克</button>
+	</div>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>

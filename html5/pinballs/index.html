@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<title>多彩弹球</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			border:0;
+			margin: 0;
+			outline: none;
+		}
+		html,body{
+			height: 100%;
+			width: 100%;
+		}
+		body{
+			background-color: green;
+		}
+		#canvas{
+			position: absolute;
+			top: 10%;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			background-color: #fff;
+		}
+		.style_btn{
+			position: absolute;
+			width: 10%;
+			height: 10%;
+			box-shadow: 10px 10px 20px #000;
+			border-radius: 10%;
+			color:#fff;
+			font-size: 1.4em;
+			font-weight: bold;
+			background-color: #563d3d;
+		}
+		.active{
+			background-color: #7b7179;
+			box-shadow: 0px 0px 0px #000;
+		}
+		#btn0{
+			top: 30%;
+			left: 5%;
+		}
+		#btn1{
+			top: 30%;
+			right: 5%;
+		}
+		#btn2{
+			bottom: 30%;
+			left: 5%;
+		}
+		#btn3{
+			bottom: 30%;
+			right: 5%;
+		}
+		@media (max-width: 1024px) {
+			#canvas{
+				top:5%;
+			}
+			.style_btn{
+				width: 30%;
+			}
+			#btn0{
+				top: 70%;
+				left: 10%;
+			}
+			#btn1{
+				top: 70%;
+				right: 10%;
+			}
+			#btn2{
+				bottom: 5%;
+				left: 10%;
+			}
+			#btn3{
+				bottom: 5%;
+				right: 10%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<!-- 样式按钮 -->
+	<button value="0" onclick="changeStyle(this);" id="btn0" class="style_btn active">样式一</button>
+	<button value="1" onclick="changeStyle(this);" id="btn1" class="style_btn">样式二</button>
+	<button value="2" onclick="changeStyle(this);" id="btn2" class="style_btn">样式三</button>
+	<button value="3" onclick="changeStyle(this);" id="btn3" class="style_btn">样式四</button>
+	<!-- js -->
+	<script type="text/javascript" src="js/aball.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

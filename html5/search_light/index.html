@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<title>探照灯&橡皮擦</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			border:0;
+			text-decoration: none;
+			outline: none;
+		}
+		html,body{
+			height: 100%;
+			width: 100%;
+		}
+		body{
+			background-color: #0aa573;
+		}
+		#canvas{
+			position: absolute;
+			top: 10%;/* 修改后点击触控受影响 */
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			background-color: #000;
+			box-shadow: 0px 0px 40px #000;
+			border-radius: 1%;
+		}
+		/*操作按钮*/
+		.the_btn{
+			position: absolute;
+			right: 5%;
+			width:10%;
+			height: 10%; 
+			border-radius: 5%;
+			box-shadow: 0 0 20px #000;
+			color: #fff;
+			font-size: 1.5em;
+		}
+		#erasure{
+			top: 40%;
+			background-color: #d6bc09;/* 待激活状态 */
+		}
+		#showpic{
+			top: 60%;
+			background-color: #313084;
+		}
+		/*当前状态*/
+		.show_state{
+			position: absolute;
+			top: 40%;
+			left: 1%;
+			width: 18%;
+			text-align: center;
+			color: #000;
+		}
+		.show_state h2{
+			color:#03fb46;
+			margin-top: 0.5em;
+		}
+		@media (max-width: 1024px){
+			.show_state{
+				top: 66%;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+				height: 5%;
+				width: 80%;
+				line-height: 1.5em;
+				text-align: center;
+			}
+			.show_state h1{
+				display: inline-block;
+				font-size: 1.5em;
+			}
+			.show_state h2{
+				display: inline-block;
+			}
+			.the_btn{
+				right: 0;
+				left: 0;
+				margin:0 auto;
+				width:60%;
+				height: 8%;
+				border-radius: 5%;
+				box-shadow: 0 0 20px #000;
+				color: #fff;
+				font-size: 1.5em;
+			}
+			#erasure{
+				top: 76%;
+			}
+			#showpic{
+				top: 88%;
+			}
+			#canvas{
+				top:5%;/* 修改后点击触控受影响 */
+			}
+
+		}
+	</style>
+</head>
+<body>
+	<div class="show_state">
+		<h1>当前效果：</h1>
+		<h2 id="show_state">探照灯</h2>
+	</div>
+	<canvas id="canvas"></canvas>
+	<button id="erasure" class="the_btn" onclick="erasure(this)" value="1">擦除效果</button>
+	<button id="showpic" class="the_btn" onclick="showpic()">显示全图</button>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
