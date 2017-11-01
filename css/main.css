@@ -16,6 +16,7 @@ ul li{
 	height: 100%;
 	width: 100%;
 }
+/*第一屏*/
 #one .inner{
 	background-color:rgba(0, 0, 0, 0.3);
 	padding-top: 15%;
@@ -29,6 +30,7 @@ ul li{
 	padding:0.5em 0;
 	margin-bottom: 1em;
 }
+/*第二屏*/
 #two .inner{
 	background-color:#1cb57b; 
 	color:#fff;
@@ -38,6 +40,11 @@ ul li{
 #two .inner h1{
 	border-bottom:3px solid #fff;
 	padding-bottom: 0.5em;
+}
+#two .inner h3{
+	margin-left: 20%;
+	width: 60%;
+	line-height: 1.5em;
 }
 #two .inner a{
 	color: #fff;
