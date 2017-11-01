@@ -6,6 +6,11 @@ ul li{
 	background: url('../image/one_bg.jpg') no-repeat center center;
 	background-size: 100% 100%;
 }
+@media (max-width:1024px){
+	#one{
+		background-image: url('../image/one_bg0.png');
+	}
+}
 .section .inner{
 	top: 0;
 	right: 0;
