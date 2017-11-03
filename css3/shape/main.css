@@ -69,9 +69,9 @@ body{
 }
 @media (max-width: 1024px){
 	.triangle{
-		border-bottom: 90px solid yellow;/* 决定三角形的高 */
-	    border-left: 50px solid transparent;/* 决定三角形左侧的角度 */
-	    border-right: 50px solid transparent;/* 决定三角形右侧的角度 */
+		border-bottom: 70px solid yellow;/* 决定三角形的高 */
+	    border-left: 40px solid transparent;/* 决定三角形左侧的角度 */
+	    border-right: 40px solid transparent;/* 决定三角形右侧的角度 */
 	}
 }
 /*梯形*/
@@ -86,9 +86,9 @@ body{
 }
 @media (max-width: 1024px){
 	.trapezoid{
-		border-bottom: 80px solid yellow;/* 决定高 */
-	    border-left: 30px solid transparent;/* 决定左侧的角度 */
-	    border-right: 30px solid transparent;/* 决定右侧的角度 */
+		border-bottom: 70px solid yellow;/* 决定高 */
+	    border-left: 25px solid transparent;/* 决定左侧的角度 */
+	    border-right: 25px solid transparent;/* 决定右侧的角度 */
 	}
 }
 /*菱形*/
@@ -113,13 +113,13 @@ body{
 }
 @media (max-width: 1024px){
 	.diamond .top{
-		margin-left: 10px;
+		margin-left: 5px;
 		border-bottom: 50px solid yellow;
 		border-left: 40px solid transparent;
 		border-right: 40px solid transparent;
 	}
 	.diamond .bottom{	
-		margin-left: 10px;
+		margin-left: 5px;
 		border-top: 50px solid yellow;
 		border-left: 40px solid transparent;
 		border-right: 40px solid transparent;
@@ -179,19 +179,19 @@ body{
 	}
 	.five_pointed_shape:before{
 		top: 30px;
-		left: -56px;
+		left: -53px;
 		border-bottom: 38px solid yellow;
-		border-left: 50px solid transparent;
-		border-right: 50px solid transparent;
+		border-left: 48px solid transparent;
+		border-right: 48px solid transparent;
 
 		transform: rotateZ(-35deg);
 	}
 	.five_pointed_shape:after{
 		top: 30px;
-		left: -45px;
+		left: -43px;
 		border-bottom: 38px solid yellow;
-		border-left: 50px solid transparent;
-		border-right: 50px solid transparent;
+		border-left: 48px solid transparent;
+		border-right: 48px solid transparent;
 
 		transform: rotateZ(35deg);
 	}
@@ -219,14 +219,14 @@ body{
 }
 @media (max-width: 1024px){
 	.six_pointed_shape{
-		border-bottom: 100px solid yellow;
+		border-bottom: 80px solid yellow;
 		border-left: 40px solid transparent;
 		border-right: 40px solid transparent;
 	}
 	.six_pointed_shape:after{
 		top: 30px;
 		left: -40px;
-		border-top: 100px solid yellow;
+		border-top: 80px solid yellow;
 		border-left: 40px solid transparent;
 		border-right: 40px solid transparent;
 	}
@@ -259,19 +259,20 @@ body{
 }
 @media (max-width: 1024px){
 	.hexagon{
-		width: 100px;
+		width: 80px;
+		height: 30%;
 	}
 	.hexagon:before{
-		top: -39px;
-		border-bottom: 40px solid yellow;
-		border-left: 50px solid transparent;
-		border-right: 50px solid transparent;
+		top: -29px;
+		border-bottom: 30px solid yellow;
+		border-left: 40px solid transparent;
+		border-right: 40px solid transparent;
 	}
 	.hexagon:after{
 		top: 98%;
-		border-top: 40px solid yellow;
-		border-left: 50px solid transparent;
-		border-right: 50px solid transparent;
+		border-top: 30px solid yellow;
+		border-left: 40px solid transparent;
+		border-right: 40px solid transparent;
 	}
 }
 /*心形*/
@@ -381,8 +382,8 @@ body{
 @media{
 	.drip{
 		top: 30px;
-		height: 80px;
-		width: 80px;
+		height: 50px;
+		width: 50px;
 		border-radius: 50%;
 		border-top-right-radius: 10%;
 
