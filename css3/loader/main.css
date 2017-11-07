@@ -54,7 +54,7 @@ body{
 @media (max-width: 1024px){
 	.content{
 		width: 90%;
-		top: 5%;
+		top: 3em;
 		height: auto;
 		margin-bottom: 5%;
 	}
