@@ -55,9 +55,9 @@ body{
 	.content ul{
 		margin-bottom: 20px;
 	}
-	.content .wraper{
+	.content .wraper{l
 		width: 40%;
-		min-height: 150px;
+		min-height: 200px;
 		margin-top: 20px;
 	}
 }
