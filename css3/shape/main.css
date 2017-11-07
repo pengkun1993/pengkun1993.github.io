@@ -28,6 +28,10 @@ body{
 @media (max-width: 1024px){
 	.content{
 		transform: rotate(90deg);
+		-o-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		-webkit-transform: rotate(90deg);
 	}
 }
 .content ul{
@@ -157,6 +161,10 @@ body{
 	border-right: 70px solid transparent;
 
 	transform: rotateZ(-35deg);
+	-o-transform: rotateZ(-35deg);
+	-ms-transform: rotateZ(-35deg);
+	-moz-transform: rotateZ(-35deg);
+	-webkit-transform: rotateZ(-35deg);
 }
 .five_pointed_shape:after{
 	content: '';
@@ -170,6 +178,10 @@ body{
 	border-right: 70px solid transparent;
 
 	transform: rotateZ(35deg);
+	-o-transform: rotateZ(35deg);
+	-ms-transform: rotateZ(35deg);
+	-moz-transform: rotateZ(35deg);
+	-webkit-transform: rotateZ(35deg);
 }
 @media (max-width: 1024px){
 	.five_pointed_shape{
@@ -185,6 +197,10 @@ body{
 		border-right: 48px solid transparent;
 
 		transform: rotateZ(-35deg);
+		-o-transform: rotateZ(-35deg);
+		-ms-transform: rotateZ(-35deg);
+		-moz-transform: rotateZ(-35deg);
+		-webkit-transform: rotateZ(-35deg);
 	}
 	.five_pointed_shape:after{
 		top: 30px;
@@ -194,6 +210,10 @@ body{
 		border-right: 48px solid transparent;
 
 		transform: rotateZ(35deg);
+		-o-transform: rotateZ(35deg);
+		-ms-transform: rotateZ(35deg);
+		-moz-transform: rotateZ(35deg);
+		-webkit-transform: rotateZ(35deg);
 	}
 }
 /*六角形*/
@@ -282,6 +302,10 @@ body{
 	width: 100px;
 
 	transform: rotateZ(45deg);
+	-o-transform: rotateZ(45deg);
+	-ms-transform: rotateZ(45deg);
+	-moz-transform: rotateZ(45deg);
+	-webkit-transform: rotateZ(45deg);
 }
 .heart:before,.heart:after{
 	content: '';
@@ -326,6 +350,10 @@ body{
 	height: 50px;
 	background: none;
 	transform: rotateZ(45deg);
+	-o-transform: rotateZ(45deg);
+	-ms-transform: rotateZ(45deg);
+	-moz-transform: rotateZ(45deg);
+	-webkit-transform: rotateZ(45deg);
 }
 .infinite:before,.infinite:after{
 	content: '';
@@ -378,6 +406,10 @@ body{
 	border-top-right-radius: 10%;
 
 	transform: rotateZ(-45deg);
+	-o-transform: rotateZ(-45deg);
+	-ms-transform: rotateZ(-45deg);
+	-moz-transform: rotateZ(-45deg);
+	-webkit-transform: rotateZ(-45deg);
 }
 @media{
 	.drip{
@@ -388,5 +420,9 @@ body{
 		border-top-right-radius: 10%;
 
 		transform: rotateZ(-45deg);
+		-o-transform: rotateZ(-45deg);
+		-ms-transform: rotateZ(-45deg);
+		-moz-transform: rotateZ(-45deg);
+		-webkit-transform: rotateZ(-45deg);
 	}
 }
