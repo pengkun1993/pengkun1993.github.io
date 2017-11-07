@@ -1,9 +1,9 @@
 $(function(){
 	$('#fullpage').fullpage({
-		resize:true,
+		resize:true,/*
 		navigation:true,
 		navigationPosition:'right',
-		navigationColor:"#fff",
+		navigationColor:"#fff",*/
 		scrollOverflow:true,
 	});
 	//two，icon正方形
