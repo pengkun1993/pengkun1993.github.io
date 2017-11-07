@@ -23,43 +23,54 @@ body{
 	background-color: #ccc;
 	border-radius: 1%;
 	box-shadow: 0 0 10px #000;
-	font-size: 0;
-}
-@media (max-width: 1024px){
-	.content{
-		transform: rotate(90deg);
-		-o-transform: rotate(90deg);
-		-ms-transform: rotate(90deg);
-		-moz-transform: rotate(90deg);
-		-webkit-transform: rotate(90deg);
-	}
+	padding: 1%;
 }
 .content ul{
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
 	height: 100%;
 	width: 100%;
 }
 .content .wraper{
 	position: relative;
-	display: inline-block;
-	width: 20%;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	align-items: center;
+	width: 22%;
 	height: 30%;
-	margin-left: 4%;
-	margin-top: 1.4%;
 	background-color: #000;
+	list-style:none;
+}
+@media (max-width: 1024px){
+	.content{
+		top: 5%;
+		height: auto;
+		width: 90%;
+		margin-bottom: 10%;
+	}
+	.content ul{
+		margin-bottom: 20px;
+	}
+	.content .wraper{
+		width: 40%;
+		height: 25%;
+		min-width: 160px;
+		min-height: 150px;
+		margin-top: 20px;
+	}
 }
 /*相同*/
 .shape{
-	position: absolute;
-	top: 10%;
-	left: 0;
-	right: 0;
-	margin: 0 auto;
-	width: 80%;
-	height: 80%;
 	background-color: yellow;
 }
 /*圆形*/
 .circle{
+	width: 100px;
+	height: 100px;
 	border-radius: 50%;
 }
 /*三角形*/
@@ -67,40 +78,24 @@ body{
 	background: none;
 	width: 0;
 	height: 0;
-	border-bottom: 140px solid yellow;/* 决定三角形的高 */
-    border-left: 80px solid transparent;/* 决定三角形左侧的角度 */
-    border-right: 80px solid transparent;/* 决定三角形右侧的角度 */
-}
-@media (max-width: 1024px){
-	.triangle{
-		border-bottom: 70px solid yellow;/* 决定三角形的高 */
-	    border-left: 40px solid transparent;/* 决定三角形左侧的角度 */
-	    border-right: 40px solid transparent;/* 决定三角形右侧的角度 */
-	}
+	border-bottom: 100px solid yellow;/* 决定三角形的高 */
+    border-left: 60px solid transparent;/* 顶点垂线交底线与左侧角的长度 */
+    border-right: 60px solid transparent;/* 顶点垂线交底线与右侧角的长度 */
 }
 /*梯形*/
 .trapezoid{
 	background: none;
 	height: 0;
-	width: 30%;
-	margin-top: 10%;
-	border-bottom: 100px solid yellow;/* 决定高 */
-    border-left: 50px solid transparent;/* 决定左侧的角度 */
-    border-right: 50px solid transparent;/* 决定右侧的角度 */
-}
-@media (max-width: 1024px){
-	.trapezoid{
-		border-bottom: 70px solid yellow;/* 决定高 */
-	    border-left: 25px solid transparent;/* 决定左侧的角度 */
-	    border-right: 25px solid transparent;/* 决定右侧的角度 */
-	}
+	width: 60px;/*上底的宽度*/
+	border-bottom: 80px solid yellow;/* 决定高 */
+    border-left: 40px solid transparent;/* 右侧上顶点到底垂线与右侧角的距离 */
+    border-right: 40px solid transparent;/* 左侧上顶点到底垂线与左侧角的距离 */
 }
 /*菱形*/
 .diamond{
 	background: none;
 }
 .diamond .top{
-	margin-left: 25px;
 	height: 0;
 	width: 0;
 	border-bottom: 70px solid yellow;
@@ -108,199 +103,85 @@ body{
 	border-right: 60px solid transparent;
 }
 .diamond .bottom{
-	margin-left: 25px;
 	height: 0;
 	width: 0;
 	border-top: 70px solid yellow;
 	border-left: 60px solid transparent;
 	border-right: 60px solid transparent;
 }
-@media (max-width: 1024px){
-	.diamond .top{
-		margin-left: 5px;
-		border-bottom: 50px solid yellow;
-		border-left: 40px solid transparent;
-		border-right: 40px solid transparent;
-	}
-	.diamond .bottom{	
-		margin-left: 5px;
-		border-top: 50px solid yellow;
-		border-left: 40px solid transparent;
-		border-right: 40px solid transparent;
-	}
-}
 /*平行四边形*/
 .parallelogram{
-	top: 20%;
-	height: 60%;
-	width: 60%;
+	height: 100px;
+	width: 100px;
 	transform: skewX(-20deg);
 	-o-transform: skewX(-20deg);
 	-ms-transform: skewX(-20deg);
 	-moz-transform: skewX(-20deg);
 	-webkit-transform: skewX(-20deg);
 }
-/*五角星*/
-.five_pointed_shape{
-	background: none;
-	height: 0;
-	width: 0;
-	border-bottom: 50px solid yellow;
-	border-left: 20px solid transparent;
-	border-right: 20px solid transparent;
-}
-.five_pointed_shape:before{
-	content: '';
-	position: absolute;
-	top: 45px;
-	left: -76px;
+/*嘴*/
+.mouse{
+	background:none;
 	width: 0;
 	height: 0;
-	border-bottom: 50px solid yellow;
-	border-left: 70px solid transparent;
-	border-right: 70px solid transparent;
-
-	transform: rotateZ(-35deg);
-	-o-transform: rotateZ(-35deg);
-	-ms-transform: rotateZ(-35deg);
-	-moz-transform: rotateZ(-35deg);
-	-webkit-transform: rotateZ(-35deg);
-}
-.five_pointed_shape:after{
-	content: '';
-	position: absolute;
-	top: 45px;
-	left: -65px;
-	width: 0;
-	height: 0;
-	border-bottom: 50px solid yellow;
-	border-left: 70px solid transparent;
-	border-right: 70px solid transparent;
-
-	transform: rotateZ(35deg);
-	-o-transform: rotateZ(35deg);
-	-ms-transform: rotateZ(35deg);
-	-moz-transform: rotateZ(35deg);
-	-webkit-transform: rotateZ(35deg);
-}
-@media (max-width: 1024px){
-	.five_pointed_shape{
-		border-bottom: 35px solid yellow;
-		border-left: 15px solid transparent;
-		border-right: 15px solid transparent;
-	}
-	.five_pointed_shape:before{
-		top: 30px;
-		left: -53px;
-		border-bottom: 38px solid yellow;
-		border-left: 48px solid transparent;
-		border-right: 48px solid transparent;
-
-		transform: rotateZ(-35deg);
-		-o-transform: rotateZ(-35deg);
-		-ms-transform: rotateZ(-35deg);
-		-moz-transform: rotateZ(-35deg);
-		-webkit-transform: rotateZ(-35deg);
-	}
-	.five_pointed_shape:after{
-		top: 30px;
-		left: -43px;
-		border-bottom: 38px solid yellow;
-		border-left: 48px solid transparent;
-		border-right: 48px solid transparent;
-
-		transform: rotateZ(35deg);
-		-o-transform: rotateZ(35deg);
-		-ms-transform: rotateZ(35deg);
-		-moz-transform: rotateZ(35deg);
-		-webkit-transform: rotateZ(35deg);
-	}
+	border:50px solid yellow;
+	border-radius: 50%;
+	border-right-color: transparent;
 }
 /*六角形*/
 .six_pointed_shape{
-	top: 3%;
+	position: relative;
+	top: -15px;
 	background: none;
 	width: 0;
 	height: 0;
-	border-bottom: 120px solid yellow;
+	border-bottom: 100px solid yellow;
 	border-left: 60px solid transparent;
 	border-right: 60px solid transparent;
 }
 .six_pointed_shape:after{
 	content: '';
 	position: absolute;
-	top: 40px;
-	left: -57px;
+	top: 30px;
+	left: -60px;
 	width: 0;
 	height: 0;
-	border-top: 120px solid yellow;
+	border-top: 100px solid yellow;
 	border-left: 60px solid transparent;
 	border-right: 60px solid transparent;
 }
-@media (max-width: 1024px){
-	.six_pointed_shape{
-		border-bottom: 80px solid yellow;
-		border-left: 40px solid transparent;
-		border-right: 40px solid transparent;
-	}
-	.six_pointed_shape:after{
-		top: 30px;
-		left: -40px;
-		border-top: 80px solid yellow;
-		border-left: 40px solid transparent;
-		border-right: 40px solid transparent;
-	}
-}
 /*六边形*/
 .hexagon{
-	top: 30%;
-	height: 40%;
-	width: 143px;
+	position: relative;
+	width: 120px;
+	height: 60px;
 }
 .hexagon:before{
 	content: '';
 	position: absolute;
 	top: -40px;
+	padding-bottom: 1px;
 	width: 0;
 	height: 0;
 	border-bottom: 40px solid yellow;
-	border-left: 72px solid transparent;
-	border-right: 72px solid transparent;
+	border-left: 60px solid transparent;
+	border-right: 60px solid transparent;
 }
 .hexagon:after{
 	content: '';
 	position: absolute;
-	top: 100%;
+	top: 60px;
 	width: 0;
 	height: 0;
 	border-top: 40px solid yellow;
-	border-left: 72px solid transparent;
-	border-right: 72px solid transparent;
-}
-@media (max-width: 1024px){
-	.hexagon{
-		width: 80px;
-		height: 30%;
-	}
-	.hexagon:before{
-		top: -29px;
-		border-bottom: 30px solid yellow;
-		border-left: 40px solid transparent;
-		border-right: 40px solid transparent;
-	}
-	.hexagon:after{
-		top: 98%;
-		border-top: 30px solid yellow;
-		border-left: 40px solid transparent;
-		border-right: 40px solid transparent;
-	}
+	border-left: 60px solid transparent;
+	border-right: 60px solid transparent;
 }
 /*心形*/
 .heart{
-	top: 25%;
-	height: 100px;
-	width: 100px;
-
+	position: relative;
+	height: 80px;
+	width: 80px;
 	transform: rotateZ(45deg);
 	-o-transform: rotateZ(45deg);
 	-ms-transform: rotateZ(45deg);
@@ -310,96 +191,54 @@ body{
 .heart:before,.heart:after{
 	content: '';
 	position: absolute;
-	top: -50px;
-	width: 100px;
-	height: 100px;
+	left: -50%;
+	width: 80px;
+	height: 80px;
 	border-radius: 50%;
 	background-color: yellow;
 }
 .heart:after{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: -50%;
-}
-@media (max-width: 1024px){
-	.heart{
-		top: 35%;
-		height: 50px;
-		width: 50px;
-	}
-	.heart:before,.heart:after{
-		top: -25px;
-		width: 50px;
-		height: 50px;
-	}
-	.heart:after{
-		top: 0;
-		left: -50%;
-	}
+	top: -50%;
+	left: 0;
 }
 /*蛋形*/
 .egg{
-	width: 40%;
+	width: 60px;
+	height: 100px;
 	border-radius: 70% 70% 70% 70% / 80% 80% 50% 50%; 
 }
 /*无穷*/
 .infinite{
-	top: 30px;
+	position: relative;
+	width: 1px;
+	height: 1px;
+	background: red; 
+}
+.infinite:before,.infinite:after{
+	content: '';
+	position: absolute;
+	top: -30px;
+	left: -75px;
 	width: 50px;
 	height: 50px;
-	background: none;
+	border:10px solid yellow;
+	border-radius: 50%;
 	transform: rotateZ(45deg);
 	-o-transform: rotateZ(45deg);
 	-ms-transform: rotateZ(45deg);
 	-moz-transform: rotateZ(45deg);
 	-webkit-transform: rotateZ(45deg);
-}
-.infinite:before,.infinite:after{
-	content: '';
-	position: absolute;
-	top: 35px;
-	left: -35px;
-	width: 50px;
-	height: 50px;
-	border:20px solid yellow;
-	border-radius: 50%;
-}
+} 
 .infinite:before{
 	border-top-right-radius: 0;
 }
 .infinite:after{
-	top: -35px;
-	left: 35px;
+	top: -30px;
+	left: 10px;
 	border-bottom-left-radius: 0;
-}
-@media (max-width: 1024px){
-	.infinite{
-		top: 30px;
-		width: 25px;
-		height: 25px;
-	}
-	.infinite:before,.infinite:after{
-		top: 20px;
-		left: -15px;
-		width: 25px;
-		height: 25px;
-		border:10px solid yellow;
-		border-radius: 50%;
-	}
-	.infinite:before{
-		border-top-right-radius: 0;
-	}
-	.infinite:after{
-		top: -15px;
-		left: 20px;
-		border-bottom-left-radius: 0;
-	}
-
-}
+} 
 /*水滴*/
 .drip{
-	top: 50px;
 	height: 100px;
 	width: 100px;
 	border-radius: 50%;
@@ -410,19 +249,4 @@ body{
 	-ms-transform: rotateZ(-45deg);
 	-moz-transform: rotateZ(-45deg);
 	-webkit-transform: rotateZ(-45deg);
-}
-@media{
-	.drip{
-		top: 30px;
-		height: 50px;
-		width: 50px;
-		border-radius: 50%;
-		border-top-right-radius: 10%;
-
-		transform: rotateZ(-45deg);
-		-o-transform: rotateZ(-45deg);
-		-ms-transform: rotateZ(-45deg);
-		-moz-transform: rotateZ(-45deg);
-		-webkit-transform: rotateZ(-45deg);
-	}
 }
