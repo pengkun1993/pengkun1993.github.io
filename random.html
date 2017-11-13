@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="U-XA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<title>抽签</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin:0;
+			text-decoration: none;
+			outline: none;
+		}
+		html,body{
+			width: 100%;
+			height: 100%;
+		}
+		.content{
+			width: 100%;
+			height: 100%;
+		}
+		.wraper{
+			position: absolute;
+			top: 10%;
+			left: 0;
+			right: 0;
+			margin:0 auto;
+			width: 60%;
+		}
+		.wraper table{
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			font-size: 1.2em;
+			line-height: 2em;
+		}
+		.wraper .title{
+			font-size: 1.5em;
+		}
+		.wraper table tr td:nth-of-type(1){
+			width: 60%;
+			cursor: pointer;
+		}
+		@media (max-width: 1024px){
+			.wraper{
+				position: absolute;
+				top: 10%;
+				left: 0;
+				right: 0;
+				margin:0 auto;
+				width: 80%;
+				height: 40%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<div class="wraper">
+			<table border="1">
+				<tr class="title">
+					<td colspan="2">中建三局北方分局第七届“北方杯”篮球赛分组抽签</td>
+				</tr>
+				<tr class="title">
+					<td>队名</td>
+					<td>结果</td>
+				</tr>
+				<tr>
+					<td onclick="ran(this,0);">中建三局北京公司队</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td onclick="ran(this,1);">大项目公司队</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td onclick="ran(this,2);">总承包天津分公司队</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td onclick="ran(this,3);">一公司北方公司队</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td onclick="ran(this,4);">二公司北京分公司队</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td onclick="ran(this,5);">三公司北京分公司队</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td onclick="ran(this,6);">三公司天津分公司队</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td onclick="ran(this,7);">局安装事业部北京经理部队</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td onclick="ran(this,8);">一公司安装北京经理部联队</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td onclick="ran(this,9);">二公司安装华北经理部队</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td onclick="ran(this,10);">三公司安装北京、天津经理部联队</td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function ran(e,num) {
+			var result=['B1','A2','B3','C1','A1','C2','D2','C3','B2','D1','A3'];
+			var tds=e.parentNode.getElementsByTagName('td');
+			var the_td=tds[tds.length-1];
+			var timer=setInterval(function(){
+				var rannum=Math.floor(Math.random()*result.length);
+				the_td.innerText=result[rannum];
+			},50);
+			setTimeout(function(){
+				the_td.innerText=result[num];
+				clearInterval(timer);
+			},1000);
+			
+			e.setAttribute('onclick','ale()');
+		}
+		function ale(){
+			alert('该公司已抽过');
+		}
+	</script>
+</body>
+</html>
