@@ -1,0 +1,62 @@
+@charset 'utf-8';
+*{
+	padding: 0;
+	margin: 0;
+	border:0;
+	outline: none;
+	text-decoration: none;
+	/*禁止文字被选中*/
+    -moz-user-select: none;
+    /*火狐*/
+    -webkit-user-select: none;
+    /*webkit浏览器*/
+    -ms-user-select: none;
+    /*IE10*/
+    -khtml-user-select: none;
+    /*早期浏览器*/
+    user-select: none;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	background-color: green;
+	overflow: hidden;
+}
+.content{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100px;
+	height: 100px;
+	margin-left: -50px;
+	margin-top: -50px;
+	perspective:10000px;
+	perspective-origin:50% 50%;
+}
+.wraper{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100px;
+	height: 100px;
+	transform-style: preserve-3d;
+	transform: rotateX(-90deg);
+}
+.wraper .pic{
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	width: 140px;
+	height: 200px;
+	margin-left: -80px;
+	margin-top: -110px;
+	border:1px solid #000;
+	line-height: 200px;
+	font-size: 15px;
+	text-align: center;
+	background-color: #fff;
+	z-index: -1;
+	background-size: 100% 100%;
+}
