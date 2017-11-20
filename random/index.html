@@ -115,7 +115,12 @@
 	</div>
 	<script type="text/javascript">
 		function ran(e,num) {
-			var result=['B1','A2','B3','C1','A1','C2','D2','C3','B2','D1','A3'];
+			var group=['A2','A3','B3','C1','C2','C3','D1','D2'];
+			group=shuffleArray(group);
+			group.splice(0,0,'B1');
+			group.splice(4,0,'A1');
+			group.splice(8,0,'B2');
+			var result=group;
 			var tds=e.parentNode.getElementsByTagName('td');
 			var the_td=tds[tds.length-1];
 			var timer=setInterval(function(){
@@ -131,6 +136,20 @@
 		}
 		function ale(){
 			alert('该公司已抽过');
+		}
+		/**
+		 * 随机打乱一个数组
+		 * @param  {[type]} array 需打乱的数组
+		 * @return {[type]}       打乱后的数组
+		 */
+		function shuffleArray(array) {
+			for (var i = array.length - 1; i > 0; i--) {
+				var j = Math.floor(Math.random() * (i + 1));
+				var temp = array[i];
+				array[i] = array[j];
+				array[j] = temp;
+			}
+			return array;
 		}
 	</script>
 </body>
