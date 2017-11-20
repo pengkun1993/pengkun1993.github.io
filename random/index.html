@@ -67,76 +67,81 @@
 					<td>结果</td>
 				</tr>
 				<tr>
-					<td onclick="ran(this,0);">中建三局北京公司队</td>
+					<td class="team" data-sort='0'>中建三局北京公司队</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td onclick="ran(this,1);">大项目公司队</td>
+					<td class="team" data-sort='1'>大项目公司队</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td onclick="ran(this,2);">总承包天津分公司队</td>
+					<td class="team" data-sort='2'>总承包天津分公司队</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td onclick="ran(this,3);">一公司北方公司队</td>
+					<td class="team" data-sort='3'>一公司北方公司队</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td onclick="ran(this,4);">二公司北京分公司队</td>
+					<td class="team" data-sort='4'>二公司北京分公司队</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td onclick="ran(this,5);">三公司北京分公司队</td>
+					<td class="team" data-sort='5'>三公司北京分公司队</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td onclick="ran(this,6);">三公司天津分公司队</td>
+					<td class="team" data-sort='6'>三公司天津分公司队</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td onclick="ran(this,7);">局安装事业部北京经理部队</td>
+					<td class="team" data-sort='7'>局安装事业部北京经理部队</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td onclick="ran(this,8);">一公司安装北京经理部联队</td>
+					<td class="team" data-sort='8'>一公司安装北京经理部联队</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td onclick="ran(this,9);">二公司安装华北经理部队</td>
+					<td class="team" data-sort='9'>二公司安装华北经理部队</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td onclick="ran(this,10);">三公司安装北京、天津经理部联队</td>
+					<td class="team" data-sort='10'>三公司安装北京、天津经理部联队</td>
 					<td></td>
 				</tr>
 			</table>
 		</div>
 	</div>
+	<script type="text/javascript" src="../dist/js/jquery.min.js"></script>
 	<script type="text/javascript">
-		function ran(e,num) {
+		$(function(){
 			var group=['A2','A3','B3','C1','C2','C3','D1','D2'];
 			group=shuffleArray(group);
 			group.splice(0,0,'B1');
 			group.splice(4,0,'A1');
 			group.splice(8,0,'B2');
-			var result=group;
-			var tds=e.parentNode.getElementsByTagName('td');
-			var the_td=tds[tds.length-1];
-			var timer=setInterval(function(){
-				var rannum=Math.floor(Math.random()*result.length);
-				the_td.innerText=result[rannum];
-			},50);
-			setTimeout(function(){
-				the_td.innerText=result[num];
-				clearInterval(timer);
-			},1000);
-			
-			e.setAttribute('onclick','ale()');
-		}
-		function ale(){
-			alert('该公司已抽过');
-		}
+			$('.team').bind('click',function(){
+				var num=this.getAttribute('data-sort');
+				if(num=='no'){
+					alert('已完成或正在抽签');
+				}else{
+					this.setAttribute('data-sort','no');
+					var result=group;
+					var tds=this.parentNode.getElementsByTagName('td');
+					var the_td=tds[tds.length-1];
+					var timer=setInterval(function(){
+						var rannum=Math.floor(Math.random()*result.length);
+						the_td.innerText=result[rannum];
+					},50);
+					setTimeout(function(){
+						the_td.innerText=result[num];
+
+						clearInterval(timer);
+					},1000);
+				}
+			})
+		});
 		/**
 		 * 随机打乱一个数组
 		 * @param  {[type]} array 需打乱的数组
