@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="U-XA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<title>闪烁的星星</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			border: 0;
+			text-decoration: none;
+			outline: none;
+		}
+		html,body{
+			width: 100%;
+			height: 100%;
+		}
+		body{
+			background-color: green;
+		}
+		#canvas{
+			position: absolute;
+			top: 10%;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			background-color: #000;
+			box-shadow: 0 0 20px #000;
+			border-radius: 2%;
+		}
+		@media (max-width: 1024px){
+			#canvas{
+				transform: rotate(90deg);
+				-ms-transform: rotate(90deg);
+				-webkit-transform: rotate(90deg);
+				-o-transform: rotate(90deg);
+			}
+		}
+	</style>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<script src="js/star.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

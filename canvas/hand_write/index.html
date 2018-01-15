@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="U-XA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<title>写字</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			border: 0;
+			outline: none;
+			text-decoration: none;
+		}
+		html,body{
+			height: 100%;
+			width: 100%;
+		}
+		body{
+			background-color: #ccc;
+		}
+		#canvas{
+			position: absolute;
+			top: 5%;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			background-color: #fff;
+			box-shadow: 0 0 20px #000;
+			border-radius: 2%; 
+		}
+		#color_btn{
+			position: absolute;
+			bottom:5%;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			text-align: center;
+		}
+		#color_btn button{
+			height: 100%;
+			width: 50px;
+			margin-left: 5px;
+			box-shadow: 0px 0px 20px #000;
+		}
+		#color_btn .black{
+			background-color: black;
+		}
+		#color_btn .red{
+			background-color: red;
+		}
+		#color_btn .blue{
+			background-color: blue;
+		}
+		#color_btn .yellow{
+			background-color: yellow;
+		}
+		#color_btn .green{
+			background-color: green;
+		}
+		#color_btn .orange{
+			background-color: orange;
+		}
+		#clear{
+			position: absolute;
+			bottom: 5%;
+			margin: 0 auto;
+			font-size: 1em;
+			color: #fff;
+			background-color: #000;
+			border-radius: 5%;
+			box-shadow: 0 0 20px #000;
+		}
+		@media (max-width: 1024px){
+			#clear{
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+			}
+		}
+	</style>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<div id="color_btn">
+		<button onclick="changecolor(this);" value="black" class="black"></button>
+		<button onclick="changecolor(this);" value="red" class="red"></button>
+		<button onclick="changecolor(this);" value="blue" class="blue"></button>
+		<button onclick="changecolor(this);" value="yellow" class="yellow"></button>
+		<button onclick="changecolor(this);" value="green" class="green"></button>
+		<button onclick="changecolor(this);" value="orange" class="orange"></button>
+	</div>
+	<button id="clear" onclick="clearall();">清除</button>
+	<script src="main.js"></script>
+</body>
+</html>

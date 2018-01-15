@@ -1,0 +1,252 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: none;
+	text-decoration: none;
+}
+html,body{
+	height: 100%;
+	width: 100%;
+}
+body{
+	background-color: green;
+}
+.content{
+	position: absolute;
+	top: 10%;
+	right: 0;
+	left: 0;
+	margin: 0 auto;
+	width: 80%;
+	height: 80%;
+	background-color: #ccc;
+	border-radius: 1%;
+	box-shadow: 0 0 10px #000;
+	padding: 1%;
+}
+.content ul{
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+}
+.content .wraper{
+	position: relative;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	align-items: center;
+	width: 22%;
+	height: 30%;
+	background-color: #000;
+	list-style:none;
+}
+@media (max-width: 1024px){
+	.content{
+		top: 5%;
+		height: auto;
+		width: 90%;
+		margin-bottom: 10%;
+	}
+	.content ul{
+		margin-bottom: 20px;
+	}
+	.content .wraper{
+		width: 40%;
+		height: 25%;
+		min-width: 160px;
+		min-height: 150px;
+		margin-top: 20px;
+	}
+}
+/*相同*/
+.shape{
+	background-color: yellow;
+}
+/*圆形*/
+.circle{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+/*三角形*/
+.triangle{
+	background: none;
+	width: 0;
+	height: 0;
+	border-bottom: 100px solid yellow;/* 决定三角形的高 */
+    border-left: 60px solid transparent;/* 顶点垂线交底线与左侧角的长度 */
+    border-right: 60px solid transparent;/* 顶点垂线交底线与右侧角的长度 */
+}
+/*梯形*/
+.trapezoid{
+	background: none;
+	height: 0;
+	width: 60px;/*上底的宽度*/
+	border-bottom: 80px solid yellow;/* 决定高 */
+    border-left: 40px solid transparent;/* 右侧上顶点到底垂线与右侧角的距离 */
+    border-right: 40px solid transparent;/* 左侧上顶点到底垂线与左侧角的距离 */
+}
+/*菱形*/
+.diamond{
+	background: none;
+}
+.diamond .top{
+	height: 0;
+	width: 0;
+	border-bottom: 70px solid yellow;
+	border-left: 60px solid transparent;
+	border-right: 60px solid transparent;
+}
+.diamond .bottom{
+	height: 0;
+	width: 0;
+	border-top: 70px solid yellow;
+	border-left: 60px solid transparent;
+	border-right: 60px solid transparent;
+}
+/*平行四边形*/
+.parallelogram{
+	height: 100px;
+	width: 100px;
+	transform: skewX(-20deg);
+	-o-transform: skewX(-20deg);
+	-ms-transform: skewX(-20deg);
+	-moz-transform: skewX(-20deg);
+	-webkit-transform: skewX(-20deg);
+}
+/*嘴*/
+.mouse{
+	background:none;
+	width: 0;
+	height: 0;
+	border:50px solid yellow;
+	border-radius: 50%;
+	border-right-color: transparent;
+}
+/*六角形*/
+.six_pointed_shape{
+	position: relative;
+	top: -15px;
+	background: none;
+	width: 0;
+	height: 0;
+	border-bottom: 100px solid yellow;
+	border-left: 60px solid transparent;
+	border-right: 60px solid transparent;
+}
+.six_pointed_shape:after{
+	content: '';
+	position: absolute;
+	top: 30px;
+	left: -60px;
+	width: 0;
+	height: 0;
+	border-top: 100px solid yellow;
+	border-left: 60px solid transparent;
+	border-right: 60px solid transparent;
+}
+/*六边形*/
+.hexagon{
+	position: relative;
+	width: 120px;
+	height: 60px;
+}
+.hexagon:before{
+	content: '';
+	position: absolute;
+	top: -40px;
+	padding-bottom: 1px;
+	width: 0;
+	height: 0;
+	border-bottom: 40px solid yellow;
+	border-left: 60px solid transparent;
+	border-right: 60px solid transparent;
+}
+.hexagon:after{
+	content: '';
+	position: absolute;
+	top: 60px;
+	width: 0;
+	height: 0;
+	border-top: 40px solid yellow;
+	border-left: 60px solid transparent;
+	border-right: 60px solid transparent;
+}
+/*心形*/
+.heart{
+	position: relative;
+	height: 80px;
+	width: 80px;
+	transform: rotateZ(45deg);
+	-o-transform: rotateZ(45deg);
+	-ms-transform: rotateZ(45deg);
+	-moz-transform: rotateZ(45deg);
+	-webkit-transform: rotateZ(45deg);
+}
+.heart:before,.heart:after{
+	content: '';
+	position: absolute;
+	left: -50%;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-color: yellow;
+}
+.heart:after{
+	top: -50%;
+	left: 0;
+}
+/*蛋形*/
+.egg{
+	width: 60px;
+	height: 100px;
+	border-radius: 70% 70% 70% 70% / 80% 80% 50% 50%; 
+}
+/*无穷*/
+.infinite{
+	position: relative;
+	width: 1px;
+	height: 1px;
+	background: red; 
+}
+.infinite:before,.infinite:after{
+	content: '';
+	position: absolute;
+	top: -30px;
+	left: -75px;
+	width: 50px;
+	height: 50px;
+	border:10px solid yellow;
+	border-radius: 50%;
+	transform: rotateZ(45deg);
+	-o-transform: rotateZ(45deg);
+	-ms-transform: rotateZ(45deg);
+	-moz-transform: rotateZ(45deg);
+	-webkit-transform: rotateZ(45deg);
+} 
+.infinite:before{
+	border-top-right-radius: 0;
+}
+.infinite:after{
+	top: -30px;
+	left: 10px;
+	border-bottom-left-radius: 0;
+} 
+/*水滴*/
+.drip{
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	border-top-right-radius: 10%;
+
+	transform: rotateZ(-45deg);
+	-o-transform: rotateZ(-45deg);
+	-ms-transform: rotateZ(-45deg);
+	-moz-transform: rotateZ(-45deg);
+	-webkit-transform: rotateZ(-45deg);
+}
