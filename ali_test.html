@@ -5,26 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>大尺寸广告图展示</title>
+    <style type="text/css">
+      .canvas{
+        border: 0;
+        margin: 0;
+        padding: 0;
+        outline: none;
+      }
+      #ad1,#ad2{
+        font-size: 0px;
+      }
+    </style>
   </head>
   <body>
     <div id="ad1" style="width:400px;height:400px;overflow:hidden">
       <!-- 请自行添加canvas元素 -->
       <canvas class="canvas"></canvas>
+      <canvas class="canvas"></canvas>
+      <canvas class="canvas"></canvas>
+      <canvas class="canvas"></canvas>
     </div>
     <div id="ad2" style="width:500px;height:700px;overflow:hidden">  
-		<canvas class="canvas"></canvas>
+      <canvas class="canvas"></canvas>
+      <canvas class="canvas"></canvas>
+      <canvas class="canvas"></canvas>
+      <canvas class="canvas"></canvas>
+      <canvas class="canvas"></canvas>
+      <canvas class="canvas"></canvas>
+      <canvas class="canvas"></canvas>
+      <canvas class="canvas"></canvas>
+      <canvas class="canvas"></canvas>
     </div>
     <script>
       function drawLargeImage($container, imageSrc) {
-         var can=$container.getElementsByTagName('canvas')[0];
-         var ctx=can.getContext('2d');
-         can.height=parseInt($container.offsetHeight);
-         can.width=parseInt($container.offsetWidth);
-         var imgObj=new Image();
-         imgObj.src=imageSrc;
-         imgObj.onload=function(){
-         	ctx.drawImage(imgObj,0,0,can.width,can.height);
-         }
+        var cans=$container.getElementsByTagName('canvas');
+        var imgObj=new Image();
+        imgObj.src=imageSrc;
+        imgObj.onload=function(){
+          var can_width=parseInt($container.offsetWidth);
+          var can_height=40000/can_width;
+          for(var i=0;i<cans.length;i++){
+            cans[i].width=can_width;
+            cans[i].height=can_height;
+
+            var ctx=cans[i].getContext('2d');
+            var sx=0;//开始裁剪的x坐标
+            var sy=i*can_height;//开始裁剪的y坐标
+            
+            ctx.drawImage(imgObj,sx,sy,can_width,can_height,0,0,can_width,can_height);
+            
+          }
+        };
       }
       drawLargeImage(document.getElementById('ad1'), 'https://gw.alicdn.com/tfs/TB163pKdMmTBuNjy1XbXXaMrVXa-400-400.jpg');
       drawLargeImage(document.getElementById('ad2'), 'https://gw.alicdn.com/tfs/TB1EaOddKuSBuNjy1XcXXcYjFXa-500-700.jpg');
