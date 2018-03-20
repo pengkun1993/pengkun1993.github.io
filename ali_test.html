@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>大尺寸广告图展示</title>
+  </head>
+  <body>
+    <div id="ad1" style="width:400px;height:400px;overflow:hidden">
+      <!-- 请自行添加canvas元素 -->
+      <canvas class="canvas"></canvas>
+    </div>
+    <div id="ad2" style="width:500px;height:700px;overflow:hidden">  
+		<canvas class="canvas"></canvas>
+    </div>
+    <script>
+      function drawLargeImage($container, imageSrc) {
+         var can=$container.getElementsByTagName('canvas')[0];
+         var ctx=can.getContext('2d');
+         can.height=parseInt($container.offsetHeight);
+         can.width=parseInt($container.offsetWidth);
+         var imgObj=new Image();
+         imgObj.src=imageSrc;
+         imgObj.onload=function(){
+         	ctx.drawImage(imgObj,0,0,can.width,can.height);
+         }
+      }
+      drawLargeImage(document.getElementById('ad1'), 'https://gw.alicdn.com/tfs/TB163pKdMmTBuNjy1XbXXaMrVXa-400-400.jpg');
+      drawLargeImage(document.getElementById('ad2'), 'https://gw.alicdn.com/tfs/TB1EaOddKuSBuNjy1XcXXcYjFXa-500-700.jpg');
+    </script>
+  </body>
+</html>
