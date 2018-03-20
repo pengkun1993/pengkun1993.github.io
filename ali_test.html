@@ -20,31 +20,32 @@
   <body>
     <div id="ad1" style="width:400px;height:400px;overflow:hidden">
       <!-- 请自行添加canvas元素 -->
-      <canvas class="canvas"></canvas>
-      <canvas class="canvas"></canvas>
-      <canvas class="canvas"></canvas>
-      <canvas class="canvas"></canvas>
     </div>
-    <div id="ad2" style="width:500px;height:700px;overflow:hidden">  
-      <canvas class="canvas"></canvas>
-      <canvas class="canvas"></canvas>
-      <canvas class="canvas"></canvas>
-      <canvas class="canvas"></canvas>
-      <canvas class="canvas"></canvas>
-      <canvas class="canvas"></canvas>
-      <canvas class="canvas"></canvas>
-      <canvas class="canvas"></canvas>
-      <canvas class="canvas"></canvas>
+    <div id="ad2" style="width:500px;height:700px;overflow:hidden"> 
     </div>
     <script>
       function drawLargeImage($container, imageSrc) {
-        var cans=$container.getElementsByTagName('canvas');
+
+        var container_w=parseInt($container.offsetWidth);
+        var container_h=parseInt($container.offsetHeight);
+
+        var can_width=container_w;
+        var can_height=40000/can_width;
+        //插入canvas
+        var can_num=Math.ceil(container_h/can_height);
+        var tempframe=document.createDocumentFragment();
+        for(var i=0;i<can_num;i++){
+          var acan=document.createElement('canvas');
+          acan.setAttribute('class','canvas');
+          tempframe.appendChild(acan);
+        }
+        $container.appendChild(tempframe);
+
         var imgObj=new Image();
         imgObj.src=imageSrc;
         imgObj.onload=function(){
-          var can_width=parseInt($container.offsetWidth);
-          var can_height=40000/can_width;
-          for(var i=0;i<cans.length;i++){
+          var cans=$container.getElementsByTagName('canvas');
+          for(var i=0;i<can_num;i++){
             cans[i].width=can_width;
             cans[i].height=can_height;
 
