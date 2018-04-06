@@ -188,11 +188,11 @@ header .fixed_btn:before{
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
-    width: 99%;
+    left: 2%;
+    width: 97%;
     height: 100%;
     background: linear-gradient(to top, #000 , #ccc); 
-    transform-origin: left bottom;
+    transform-origin: center bottom;
     transform: rotateX(80deg) skewX(-10deg);
     z-index: -1;
 }
