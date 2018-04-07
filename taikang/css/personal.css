@@ -98,27 +98,25 @@ header{
 .content{
 	position: relative;
 	width: 100%;
-	height: 65%;
 }
 .form_wraper{
-	position: absolute;
+	position: relative;
 	top: 0;
 	left: 0;
 	right: 0;
 	margin: 0 auto;
-	height: 95%;
 	width: 95%;
 	border:0.1rem solid #ccc;
 	box-shadow: 0 0 0.5rem #fff inset;
 	border-radius: 0.2rem;
+	padding: 3%;
 }
 .form_inner{
-	position: absolute;
-	top: 3%;
+	position: relative;
 	left: 0;
 	right: 0;
 	margin: 0 auto;
-	width: 94%;
+	width: 100%;
 	background-color: #5F769C;
 	padding: 10%;
 	padding-top: 0;
