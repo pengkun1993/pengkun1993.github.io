@@ -176,6 +176,7 @@ header .fixed_btn:before{
     word-break:keep-all;/* 不换行 */ 
     white-space:nowrap;/* 不换行 */ 
     overflow: auto;
+    padding: 0.2rem 0
 }
 .ads .ad_img{
     position: relative;

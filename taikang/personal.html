@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<title>保障</title>
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css">
+    <link rel="stylesheet" type="text/css" href="css/mui.picker.min.css">
+	<link rel="stylesheet" type="text/css" href="css/personal.css">
+</head>
+<body>
+	<header>
+		<div class="top_left">
+			<h1>兑现爱的保障</h1>
+			<p>泰康呵护您的一生</p>
+			<p>全新流程&nbsp;让理赔更快更贴心</p>
+		</div>
+		<div class="top_right">
+			<div class="img_wraper">
+				<img src="images/pei.jpg" alt="赔" />
+			</div>
+		</div>
+		<div style="clear:both;"></div>
+	</header>
+	<div class="content">
+		<div class="form_wraper">
+			<div class="form_inner">
+				<form action="">
+					<div class="username input_row">
+						<input type="text" placeholder="请输入您的姓名" />
+						<div class="under_line"></div>
+					</div>
+					<div class="id_card input_row" id="pickerButton">
+						<input type="hidden" value="3" id="pickerInput" />
+						<div id="userResult" class="show_input">身份证</div>
+						<span id='arrow_icon' class="mui-icon mui-icon-arrowright"></span>
+						<div class="under_line"></div>
+					</div>
+					<div class="id_number input_row">
+						<input type="text" placeholder="请输入证件号码" />
+						<div class="under_line"></div>
+					</div>
+					<div class="input_row">
+						<button class="confirm_btn">确认</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/mui.min.js"></script>
+	<script type="text/javascript" src="js/mui.picker.min.js"></script>
+	<script type="text/javascript">
+		window.onload=function(){
+			var picker = new mui.PopPicker(); 
+			picker.setData([
+				{value:'1',text:'军官证'},
+				{value:'2',text:'户口本'},
+				{value:'3',text:'身份证'},
+				{value:'4',text:'护照'},
+				{value:'5',text:'驾驶证'}
+			]);console.log(picker);
+			picker.pickers[0].setSelectedValue('3', 2000);
+			var pickerInput = document.getElementById('pickerInput');
+			var pickerButton=document.getElementById('pickerButton')
+			var userResult = document.getElementById('userResult');
+			pickerButton.addEventListener('tap', function(event) {
+				//箭头变幻方向
+				var iarrow=document.getElementById('arrow_icon');
+				iarrow.style.transform='rotate(90deg)';
+				picker.show(function(items) {
+					// 设置值和显示内容
+					pickerInput.value=items[0]['value'];
+					userResult.innerText = items[0]['text'];
+					// 恢复箭头
+					iarrow.style.transform='rotate(0deg)';
+					picker.body.addEventListener('tap',function(){
+						iarrow.style.transform='rotate(0deg)';
+					},false);
+				});
+
+			}, false);
+			
+		}
+	</script>
+</body>
+</html>

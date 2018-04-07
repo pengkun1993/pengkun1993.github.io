@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <title>首页</title>
     <link rel="stylesheet" type="text/css" href="css/mui.min.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
 	<header>
@@ -13,7 +13,7 @@
 	</header>
 	<div class="content">
 		<div class="claim_application">
-			<button>理赔<br/>申请</button>
+			<button id="appli_btn">理赔<br/>申请</button>
 		</div>
 		<div class="btn_group">
 			<div class="btn_wraper hospital">
@@ -59,10 +59,16 @@
 	<footer>
 		<p>理赔业务咨询可拨&nbsp;<a href="tel:95522">95522</a>，我们将竭诚为您服务！</p>
 	</footer>
-	<script src="js/mui.min.js"></script>
-	<script type="text/javascript" charset="utf-8">
-      	
-    </script>
+	<script type="text/javascript">
+		window.onload=function(){
+			var iappli_btn=document.getElementById('appli_btn');
+			iappli_btn.onclick=function(){
+				setTimeout(function(){
+					location.href='personal.html';
+				},300);
+			}
+		}
+	</script>
 </body>
 </html>
 
