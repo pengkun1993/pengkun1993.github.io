@@ -107,7 +107,8 @@ header{
 	margin: 0 auto;
 	width: 95%;
 	border:0.1rem solid #ccc;
-	box-shadow: 0 0 0.5rem #fff inset;
+	background-color: #D7D9DA;
+	box-shadow: 0 0 0.5rem 0.2rem #fff inset;
 	border-radius: 0.2rem;
 	padding: 3%;
 }
