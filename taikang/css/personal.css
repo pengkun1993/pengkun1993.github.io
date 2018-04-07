@@ -108,7 +108,7 @@ header{
 	width: 95%;
 	border:0.1rem solid #ccc;
 	background-color: #D7D9DA;
-	box-shadow: 0 0 0.5rem 0.2rem #fff inset;
+	box-shadow: 0 0 0.2rem 0.2rem #fff inset;
 	border-radius: 0.2rem;
 	padding: 3%;
 }
