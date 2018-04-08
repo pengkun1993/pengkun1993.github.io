@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>报案记录</title>
+	<link rel="stylesheet" type="text/css" href="css/record.css">
+</head>
+<body>
+	<header>
+		<span class="tips">您共有2条报案记录</span>
+	</header>
+	<div class="content">
+		<!-- 一个申请记录 -->
+		<div class="record_wraper">
+			<div class="record_mes">
+				<h1>张青青</h1>
+				<p class="type">意外·医疗</p>
+				<div class="time_line">
+					<div class="left_title time_box">
+						<p>出险</p>
+						<p>报案</p>
+						<div class="line_circle"></div>
+					</div>
+
+					<div class="right_date time_box">
+						<p>2017-03-23</p>
+						<p>2017-03-23</p>
+					</div>
+				</div>
+			</div>
+			<button class="record_btn">
+				去申请
+			</button>
+		</div>
+		<!-- 一个申请记录 -->
+		<div class="record_wraper">
+			<div class="record_mes">
+				<h1>张青青</h1>
+				<p class="type">意外·医疗</p>
+				<div class="time_line">
+					<div class="left_title time_box">
+						<p>出险</p>
+						<p>报案</p>
+						<div class="line_circle"></div>
+					</div>
+
+					<div class="right_date time_box">
+						<p>2017-03-23</p>
+						<p>2017-03-23</p>
+					</div>
+				</div>
+			</div>
+			<button class="record_btn">
+				去申请
+			</button>
+		</div>
+		<p class="tip_mes">您也可点击下方按钮进行索赔</p>
+		<button class="atonce_btn" id="atonce_btn">立即申请</button>
+	</div>
+	<script type="text/javascript">
+		window.onload=function(){
+			(function(){
+				var records=document.querySelectorAll('.record_wraper');
+				for(var i=0,l=records.length;i<l;i++){
+					records[i].style.transitionDelay=(i*0.05)+'s';
+					
+					records[i].style.left='0';
+					records[i].style.right='0';
+					
+				}
+				var iatone_btn=document.getElementById('atonce_btn');
+				
+				iatone_btn.style.webkitTransform='scale(1,1)';
+			})();
+		}
+		
+	</script>
+</body>
+</html>
