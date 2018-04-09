@@ -61,6 +61,7 @@
 	<script type="text/javascript">
 		window.onload=function(){
 			(function(){
+				//卡片移动效果
 				var records=document.querySelectorAll('.record_wraper');
 				for(var i=0,l=records.length;i<l;i++){
 					records[i].style.transitionDelay=(i*0.05)+'s';
@@ -69,12 +70,15 @@
 					records[i].style.right='0';
 					
 				}
-				var iatone_btn=document.getElementById('atonce_btn');
-				
-				iatone_btn.style.webkitTransform='scale(1,1)';
 			})();
+			var qrecord_btn=document.querySelectorAll('.record_btn');
+			for(var i=0,l=qrecord_btn.length;i<l;i++){
+				qrecord_btn[i].onclick=function(){
+					location.href='fillin.html';
+				}
+			}
+			
 		}
-		
 	</script>
 </body>
 </html>

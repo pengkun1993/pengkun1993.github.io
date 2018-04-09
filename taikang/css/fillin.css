@@ -1,0 +1,545 @@
+@charset 'utf-8';
+
+/*common*/
+*{
+	padding: 0;
+	border:0;
+	margin: 0;
+	text-decoration:none;
+	outline: none;
+}
+@media screen and (min-width: 320px) {
+    html {font-size: 14px;}
+}
+ 
+@media screen and (min-width: 360px) {
+    html {font-size: 16px;}
+}
+ 
+@media screen and (min-width: 400px) {
+    html {font-size: 18px;}
+}
+ 
+@media screen and (min-width: 440px) {
+    html {font-size: 20px;}
+}
+ 
+@media screen and (min-width: 480px) {
+    html {font-size: 22px;}
+}
+ 
+@media screen and (min-width: 640px) {
+    html {font-size: 28px;}
+}
+html,body{
+	width: 100%;
+	height: 100%;
+    overflow: hidden;
+}
+body{
+    background: linear-gradient(to bottom,#5B77A9,#394976);
+}
+section{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin:0 auto;
+	width: 100%;
+	height: 100%;
+}
+/*第一页*/
+/*header*/
+.section1 header{
+	height: 30%;
+}
+.section1 .three{
+	position: relative;
+	top: 10%;
+	left: 100%;
+	margin: 0 auto;
+	width: 90%;
+	height: 20vh;
+	animation: right_in_late 0.5s linear 0s 1;
+	animation-fill-mode: forwards;
+}
+@keyframes right_in_late{
+	form{
+		left: 100%;
+	}
+	to{
+		left: 0;
+		right: 0;
+	}
+}
+.section1 .three img{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+/*content*/
+.section1 .record{
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 80%;
+	height: 26vh;
+	background-color:#A4BDE9;
+	border-radius: 1rem;
+	padding: 2rem;
+	box-sizing: border-box;
+	border: 1px solid #aaa;
+	animation: scale_record 0.5s linear 0s 1;
+}
+@keyframes scale_record{
+	0%{
+		transform: scale(0.2);
+	}
+	50%{
+		transform: scale(0.5);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+.section1 .record:after{
+	content: '';
+	position: absolute;
+	top: 5%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 95%;
+	height: 100%;
+	border-radius: 2rem;
+	background-color: #4E6790;
+	border: 1px solid #000;
+	box-shadow: 0 0 10px #000;
+	z-index: -1;
+	animation: opacity_record 0.5s linear 0.1s 1;
+}
+@keyframes opacity_record{
+	0%{
+		opacity: 0;
+	}
+	99%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.section1 .record h1{
+	font-size: 1.2rem;
+	line-height: 3rem;
+	margin: 0;
+}
+.section1 .record h1 span{
+	font-size: 0.8rem;
+	color: #666;
+}
+.section1 .record p{
+	line-height: 2rem;
+	font-size: 1rem;
+	margin: 0;
+	color: #000;
+}
+.section1 .record p span{
+	display: inline-block;
+}
+.section1 .record p .title{
+	width: 35%;
+	text-align: justify;
+}
+.section1 .record p .value{
+	width: 60%;
+}
+.section1 .tips{
+	margin-top: 20%;
+	color: #fff;
+	text-align: center;
+}
+.section1 .begin_btn{
+	position: relative;
+	top: 2rem;
+	left: 50%;
+	width: 15%;
+	height: 15vw;
+	line-height: 15vw;
+	border-radius: 50%;
+	font-size: 1.5rem;
+	transform: translateX(-50%);
+	background-color: #fff;
+	animation: scale_btn 0.5s linear 0s 1;
+	padding: 0;
+	color:#255886;
+}
+@keyframes scale_btn{
+	0%{
+		transform:translateX(-50%) scale(0.1);
+	}
+	50%{
+		transform:translateX(-50%) scale(0.8);
+	}
+	70%{
+		transform:translateX(-50%) scale(1.2);
+	}
+	100%{
+		transform:translateX(-50%) scale(1);
+	}
+}
+/*下一步*/
+.section1 .next_step{
+	position: absolute;
+	top: 30%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	text-align: center;
+	animation:mnext_step  2s linear 0s 1;
+	animation-fill-mode: forwards;
+	display: none;
+}
+@keyframes mnext_step{
+	0%{
+		transform: translate(0) scale(0);
+	}
+	30%{
+		transform: translate(0) scale(1);
+	}
+	50%{
+		transform: translate(0) scale(1);
+	}
+	100%{
+		transform: translateY(-1000%) scale(1);
+	}
+}
+.section1 .next_step p{
+	line-height: 2rem;
+	font-size: 1rem;
+	color: #fff;
+}
+/*消失动画*/
+.section1 .opacity_0{
+	transition: opacity 0.5s linear;
+}
+/*section2*/
+/*选择图片页面*/
+.section2 .choice_pic_wraper{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	background-color: #454C5C;
+	z-index: 999;
+}
+.section2 header{
+	height: 20%;
+	animation: opacity_1 0.5s linear 0s 1;
+}
+@keyframes opacity_1{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.section2 .opera_btn{
+	margin: 10% auto;
+	width: 100%;
+	text-align: center;
+}
+.section2 .opera_btn .circle_num{
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	line-height: 1rem;
+	font-size: 0.8rem;
+	color: #fff;
+	background-color: #7C95BF;
+	border-radius: 50%;
+	margin: 0.2rem;
+}
+.section2 .opera_btn .active{
+	background-color: #A5BFEF;
+	color: #496A99;
+}
+.section2 .now_message{
+	text-align: center;
+	color: #fff;
+	font-size: 1.2rem;
+	font-weight: 200;
+}
+.section2 .now_message span{
+	display: inline-block;
+	vertical-align: middle;
+}
+.section2 .now_message .left_arrow{
+	width: 3rem;
+	text-align: left;
+	font-size: 2rem;
+}
+.section2 .now_message .right_arrow{
+	width: 3rem;
+	text-align: right;
+	font-size: 2rem;
+}
+/*主体操作部分*/
+.section2 .content{
+	position: relative;
+	height: 65%;
+}
+/*step1*/
+.step1 .pic_wraper{
+	position: absolute;
+	top: 5%;
+	left: 0;
+	right: 0;
+	margin:0 auto;
+	width: 45%;
+	height: 50%;
+}
+.step1 .pic_wraper img{
+	display:block;
+	width: 100%;
+	height: 100%;
+	animation: right_in_rotate 0.5s linear 0s 1;
+	animation-fill-mode: forwards;
+}
+@keyframes right_in_rotate{
+	0%{
+		transform-origin: 100% 100%;
+		transform:translateX(100%) rotate(90deg);
+	}
+	100%{
+		transform-origin: 100% 100%;
+		transform:translateX(0%) rotate(0deg);
+	}
+}
+@keyframes big_small{
+	0%{
+		opacity: 0;
+		transform: scale(2);
+	}
+	100%{
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+@keyframes left_out{
+	0%{
+		transform-origin: 100% 100%;
+		transform:translateX(0%) rotate(0deg);
+	}
+	100%{
+		transform-origin: 100% 100%;
+		transform:translateX(-200%) rotate(-90deg);
+	}
+}
+.step1 .camera_wraper{
+	position: absolute;
+	top: 45%;
+	width: 100%;
+	text-align: center;
+	animation: bottom_in 0.5s linear 0s 1;
+}
+@keyframes bottom_in{
+	0%{
+		opacity: 0;
+		transform: translateY(200%);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+/*相机按钮*/
+.step1 .camera_btn{
+	background: url('../images/camera.png') no-repeat center center;
+	background-size: 100%;
+	width: 20%;
+	height: 20vw;
+	border-radius: 50%;
+	border: 0;
+	outline: none;
+	box-shadow: 0px 5px 10px #000;
+}
+.step1 .tips{
+	margin-top: 1rem;
+	text-align: center;
+	font-size: 1.2rem;
+	color: #fff;
+}
+/*正确按钮*/
+.step1 .correct_btn{
+	position: absolute;
+	right: -1.5rem;
+	bottom: -1.5rem;
+	width: 3rem;
+	height: 3rem;
+	background: url('../images/correct.png') no-repeat center center;
+	background-size: 100%;
+	border-radius: 50%;
+	outline: none;
+	border:0;
+	opacity: 0;
+	animation: correct_move 0.3s linear 0.5s 1;
+	animation-fill-mode: forwards;
+	display: none;
+}
+@keyframes correct_move{
+	from{
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	to{
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+.step1 .wram_tips{
+	display: none;
+}
+/*温馨提示*/
+.wram_tips{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 80%;
+}
+.wram_tips p{
+	color: #ccc;
+	font-size: 0.8rem;
+	line-height: 1.5rem;
+}
+/*step2*/
+.step2 .card_wraper{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 100%;
+	height: 50vw;
+	text-align: center;
+}
+.step2 .card_wraper img{
+	display: block;
+	margin-left: 10%;
+	width: 80%;
+	height: 100%;
+	box-shadow: 0 0 2rem #000;
+	animation: card_right_in 0.5s linear 0s 1;
+	
+}
+@keyframes card_right_in{
+	from{
+		transform-origin: 100% 100%;
+		transform: translate(100%,50%) rotate(45deg);
+	}
+	to{
+		transform-origin: 100% 100%;
+		transform: translateX(0%) rotate(0deg);
+	}
+}
+/*相机按钮*/
+.step2 .card_wraper .camera_btn{
+	position: absolute;
+	top: 45vw;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	background: url('../images/camera.png') no-repeat center center;
+	background-size: 100%;
+	width: 20%;
+	height: 20vw;
+	border-radius: 50%;
+	border: 0;
+	outline: none;
+	box-shadow: 0 5px 10px #000;
+	animation:camera_big 0.5s linear 0s 1;
+}
+@keyframes camera_big{
+	from{
+		transform: translate(150%,50%) scale(0.4);
+	}
+	to{
+		transform: translate(0%) scale(1);
+	}
+}
+/*拍照上传*/
+.step2 .card_wraper .tips{
+	margin-top: 20%;
+	font-size: 1.2rem;
+	color: #fff;
+}
+/*card容器*/
+.step2 .cards_container{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 100%;
+	height: 70%;
+	padding:0 10%;
+}
+.step2 .cards_container .one_card{
+	position: relative;
+	display: inline-block;
+	width: 30%;
+	height: 18vw;
+	background-color: #fff;
+	margin-left: 2%;
+	padding: 2%;
+	box-shadow: 0 0 1rem #000;
+	vertical-align: middle;
+	animation: big_small 0.5s linear 0s 1;
+}
+.step2 .cards_container .one_card img{
+	display: block;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	box-shadow: 0 0 1rem #000;
+}
+.step2 .cards_container .one_card .close_icon{
+	position: absolute;
+	top: -0.5rem;
+	right: -0.5rem;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50%;
+	background-color: rgba(255,255,255,0.8);
+	text-align: center;
+	font-size: 1.1rem;
+	line-height: 1rem;
+}
+/*增加照片*/
+.step2 .cards_container .add_one{
+	position: relative;
+	display: inline-block;
+	width: 30%;
+	height: 18vw;
+	background-color: #405276;
+	margin-left: 3%;
+	vertical-align: middle;
+	font-size: 5rem;
+	text-align: center;
+	line-height: 14vw;
+	color: #6785B8;
+}
+
+
+

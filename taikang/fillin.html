@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+	<title>填写申请信息</title>
+	<link rel="stylesheet" type="text/css" href="css/mui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/fillin.css">
+</head>
+<body>
+	<section class="section1" id="section1" style="display: none;">
+		<header>
+			<div class="three opacity_0"><img src="images/three.png" alt=""></div>
+		</header>
+		<div class="content">
+			<div class="record">
+				<h1>张青青 <span>出险人</span></h1>
+				<p><span class="title">身&nbsp;&nbsp;份&nbsp;证</span><span class="value">439475827484758485</span></p>
+				<p><span class="title">出险时间</span><span class="value">2017-02-11</span></p>
+			</div>
+			<p class="tips opacity_0">第一步&nbsp;&nbsp;填写申请信息</p>
+			<button class="begin_btn opacity_0">→</button>
+		</div>
+		<div class="next_step">
+			<p>第二步</p>
+			<p>上传理赔资料</p>
+		</div>
+	</section>
+	<section class="section2" id="section2" style="display: block;">
+		<header>
+			<div class="opera_btn">
+				<span class="circle_num active">1</span>
+				<span class="circle_num">2</span>
+				<span class="circle_num">3</span>
+				<span class="circle_num">4</span>
+				<span class="circle_num">5</span>
+			</div>
+			 <div class="now_message">
+			 	<span class="mui-icon mui-icon-arrowleft left_arrow"></span>
+			 	<span class="mess_text">提交理赔申请书</span>
+			 	<span class="mui-icon mui-icon-arrowright right_arrow"></span>
+			 </div>
+		</header>
+		<div class="content">
+			<div class="step1 step" id="step1" style="display: none;">
+				<div class="pic_wraper">
+					<img src="images/artile.png" alt="">
+					<button class="correct_btn"></button>
+				</div>
+				<div class="camera_wraper">
+					<button class="camera_btn"></button>
+					<p class="tips">拍照上传</p>
+				</div>
+				<div class="wram_tips">
+					<p>温馨提示：</p>
+					<p>如果您想上传纸质版《理赔申请书》，请先将上面填写完成的电子上《理赔申请书》删除。</p>
+				</div>
+			</div>
+			<div class="step2 step" id="step2" style="display: block;">
+				<div class="card_wraper">
+					<img src="images/id_card.jpeg" alt="">
+					<button class="camera_btn"></button>
+					<p class="tips">拍照上传</p>
+				</div>
+				<div class="cards_container" style="display: none;">
+					<!-- <div class="one_card">
+						<img src="images/id_card.jpeg" alt="">
+						<span class="mui-icon mui-icon-closeempty close_icon"></span>
+					</div> -->
+					<div class="add_one">
+						+
+					</div>
+				</div>
+				<div class="wram_tips">
+					<p>温馨提示：</p>
+					<p>身份证和外国人永久居住证需要上传正反面</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript">
+		window.onload=function(){
+			// section1
+			var isection1=document.getElementById('section1');
+
+			isection1.querySelector('.begin_btn').onclick=function(){
+				var opacity_0s=isection1.querySelectorAll('.opacity_0');
+				for(var i=0,l=opacity_0s.length;i<l;i++){
+					opacity_0s[i].style.opacity=0;
+				}
+
+				isection1.querySelector('.record').style.webkitTransform='scale(0)';
+
+				setTimeout(function(){
+					// 进入section2
+					isection1.querySelector('.next_step').style.display='block';
+					setTimeout(function(){
+						var isection2=document.getElementById('section2');
+						isection2.style.display='block';
+					},2000);
+				},600);
+			}
+			var istep1=document.getElementById('step1');
+			var istep2=document.getElementById('step2');
+			// step1
+			istep1.querySelector('.camera_btn').onclick=function(){
+				// 显示相机图片提示信息
+				var qcamera_wraper=istep1.querySelector('.camera_wraper');
+				qcamera_wraper.style.display='none';
+				//更换文件图片动画
+				var qcamera_img=istep1.querySelector('.pic_wraper img');
+				qcamera_img.style.animationName='big_small';
+				//显示对号按钮
+				var qcorrect_btn=istep1.querySelector('.correct_btn');
+				qcorrect_btn.style.display='block';
+				//显示提示信息
+				var iwram_tips=istep1.querySelector('.wram_tips');
+				iwram_tips.style.display='block';
+				//自动进行第二步
+				setTimeout(function(){
+					qcorrect_btn.style.backgroundImage='url(images/camera.png)';
+					qcamera_img.style.animationName='left_out';
+
+					setTimeout(function(){
+						istep1.style.display='none';
+						istep2.style.display='block';
+					},500);
+				},1000);
+			}
+			//step2
+			istep2.querySelector('.camera_btn').onclick=function(){
+				istep2.querySelector('.card_wraper').style.display='none';
+				istep2.querySelector('.cards_container').style.display='block';
+
+				var add_node=create_card('images/id_card.jpeg');
+				setTimeout(function(){
+					istep2.querySelector('.cards_container').insertBefore(add_node,istep2.querySelector('.add_one'));
+				},300);
+				
+			}
+			function create_card(img_src){
+				var new_div=document.createElement('div');
+				new_div.setAttribute('class','one_card');
+				
+				var new_img=new Image();
+				new_img.src=img_src;
+				new_div.appendChild(new_img);
+
+				var icon_span=document.createElement('span');
+				icon_span.setAttribute('class','class="mui-icon mui-icon-closeempty close_ico');
+				new_div.appendChild(icon_span);
+
+				return new_div;
+			}
+		}
+	</script>
+</body>
+</html>
+
+
+
+

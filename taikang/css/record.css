@@ -35,7 +35,9 @@ html,body{
 	height: 100%;
 }
 body{
+	position: absolute;
 	background: linear-gradient(to bottom,#546C93,#E3EEFF);
+	z-index: -5;
 }
 /*header*/
 header{
@@ -50,6 +52,9 @@ header .tips{
 }
 /*content*/
 .content{
+	position: absolute;
+	width: 100%;
+	z-index: -4;
 }
 .record_wraper{
 	position: relative;
@@ -60,8 +65,8 @@ header .tips{
 	height: 25vh;
 	background-color: #CFD8E6;
 	border: 1px solid #ccc;
-	z-index: -1;
 	transition: left 0.3s ease-in;
+	z-index: -3;
 }
 .record_wraper .record_mes{
 	position: absolute;
@@ -71,7 +76,7 @@ header .tips{
 	box-sizing: border-box;
 	box-shadow: 0 0 10px #666;
 	padding: 5%;
-	z-index: -3;
+	z-index: -2;
 }
 .record_wraper .record_mes h1{
 	font-size: 1.5rem;
@@ -80,6 +85,41 @@ header .tips{
 .record_wraper .record_mes .type{
 	font-size: 0.8rem;
 	color: #959595;
+}
+/*申请圆按钮*/
+.record_wraper .record_btn{
+	position: absolute;
+	top: 50%;
+	right: 5%;
+	width: 25%;
+	height: 20vw;
+	background-color: #49649F;
+	margin-top: -10vw;
+	border-radius: 90%;
+	font-size: 1rem;
+	color: #fff;
+}
+.record_wraper .record_btn:after{
+	content: '';
+	position: absolute;
+	left: -10%;
+	top: -10%;
+	width: 120%;
+	height: 120%;
+	background-color:#CFD8E6 ;
+	border-radius: 50%;
+	box-shadow: 0 0 10px #666 inset;
+	z-index: -2;
+}
+.record_wraper .record_btn:before{
+	content: '';
+	position: absolute;
+	left: 44%;
+	top: -10%;
+	width: 70%;
+	height: 120%;
+	background-color:#CFD8E6 ;
+	z-index: -1;
 }
 /*时间显示*/
 .time_line .time_box{
@@ -129,41 +169,6 @@ header .tips{
 	background-color: #4869A9; 
 	border-radius: 100%;
 }
-/*申请圆按钮*/
-.record_wraper .record_btn{
-	position: absolute;
-	top: 50%;
-	right: 5%;
-	width: 25%;
-	height: 20vw;
-	background-color: #49649F;
-	margin-top: -10vw;
-	border-radius: 90%;
-	font-size: 1rem;
-	color: #fff;
-}
-.record_wraper .record_btn:after{
-	content: '';
-	position: absolute;
-	left: -10%;
-	top: -10%;
-	width: 120%;
-	height: 120%;
-	background-color:#CFD8E6 ;
-	z-index: -2;
-	border-radius: 50%;
-	box-shadow: 0 0 10px #666 inset;
-}
-.record_wraper .record_btn:before{
-	content: '';
-	position: absolute;
-	left: 44%;
-	top: -10%;
-	width: 70%;
-	height: 120%;
-	background-color:#CFD8E6 ;
-	z-index: -1;
-}
 /*提示信息*/
 .tip_mes{
 	text-align: center;
@@ -182,7 +187,21 @@ header .tips{
 	margin-top: 5%;
 	background-color: #4D6AA4;
 	color: #fff;
-	transform: scale(0.1,0.1);
-	transition: all 0.3s ease-in;
+	transform: scale(0.1);
+	animation: atonce 0.5s linear 0s 1;
+	animation-fill-mode:forwards;
 }
-
+@keyframes atonce{
+	0%{
+		transform: scale(0.1);
+	}
+	30%{
+		transform: scale(0.3);
+	}
+	70%{
+		transform: scale(1.2);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
