@@ -160,6 +160,7 @@ section{
 	margin-top: 20%;
 	color: #fff;
 	text-align: center;
+	font-size: 1rem;
 }
 .section1 .begin_btn{
 	position: relative;
@@ -617,6 +618,7 @@ section{
 	margin: 0 auto;
 	color: #fff;
 	text-align: center;
+	font-size: 1rem;
 }
 /*扫描框*/
 .step3 .scan_wraper .scan_grad{
@@ -647,6 +649,7 @@ section{
 	padding: 5%;
 	animation: ocr_show 0.5s linear 0s 1;
 	animation-fill-mode: both;
+	font-size: 1rem;
 }
 @keyframes ocr_show{
 	from{

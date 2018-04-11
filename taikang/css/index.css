@@ -130,7 +130,8 @@ header .fixed_btn:before{
 }
 .btn_group .btn_wraper p{
     color: #000;
-    font-size: 0.8rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
 }
 .btn_group .btn_wraper:nth-of-type(3){
     margin:0 5%;
@@ -212,6 +213,9 @@ footer{
     font-size: 0.8rem;
     line-height: 5vh;
     text-align: center;
+}
+footer > p{
+    font-size: 1rem;
 }
 footer > p > a{
     color: orange;
