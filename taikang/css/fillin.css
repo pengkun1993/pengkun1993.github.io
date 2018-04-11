@@ -133,7 +133,7 @@ section{
 }
 .section1 .record h1{
 	font-size: 1.2rem;
-	line-height: 3rem;
+	line-height: 2rem;
 	margin: 0;
 }
 .section1 .record h1 span{
@@ -554,7 +554,7 @@ section{
 	margin-left: 3%;
 	margin-top: 5%;
 	vertical-align: middle;
-	font-size: 5rem;
+	font-size: 4rem;
 	text-align: center;
 	line-height: 18vw;
 	color: #6785B8;
