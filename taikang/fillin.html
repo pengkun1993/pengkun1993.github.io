@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="css/fillin.css">
 </head>
 <body>
-	<section class="section1" id="section1" style="display: none;">
+	<section class="section1" id="section1" style="display: block;">
 		<header>
 			<div class="three opacity_0"><img src="images/three.png" alt=""></div>
 		</header>
@@ -26,7 +26,7 @@
 			<p>上传理赔资料</p>
 		</div>
 	</section>
-	<section class="section2" id="section2" style="display: block;">
+	<section class="section2" id="section2" style="display: none;">
 		<header>
 			<div class="opera_btn">
 				<span class="circle_num active">1</span>
@@ -36,13 +36,13 @@
 				<span class="circle_num">5</span>
 			</div>
 			 <div class="now_message">
-			 	<span class="mui-icon mui-icon-arrowleft left_arrow"></span>
+			 	<span class="mui-icon mui-icon-arrowleft left_arrow" date-arrow='left'></span>
 			 	<span class="mess_text">提交理赔申请书</span>
-			 	<span class="mui-icon mui-icon-arrowright right_arrow"></span>
+			 	<span class="mui-icon mui-icon-arrowright right_arrow" date-arrow='right'></span>
 			 </div>
 		</header>
 		<div class="content">
-			<div class="step1 step" id="step1" style="display: none;">
+			<div class="step1 step" id="step1" style="display: block;">
 				<div class="pic_wraper">
 					<img src="images/artile.png" alt="">
 					<button class="correct_btn"></button>
@@ -56,7 +56,7 @@
 					<p>如果您想上传纸质版《理赔申请书》，请先将上面填写完成的电子上《理赔申请书》删除。</p>
 				</div>
 			</div>
-			<div class="step2 step" id="step2" style="display: block;">
+			<div class="step2 step" id="step2" style="display: none;">
 				<div class="card_wraper">
 					<img src="images/id_card.jpeg" alt="">
 					<button class="camera_btn"></button>
@@ -65,7 +65,7 @@
 				<div class="cards_container" style="display: none;">
 					<!-- <div class="one_card">
 						<img src="images/id_card.jpeg" alt="">
-						<span class="mui-icon mui-icon-closeempty close_icon"></span>
+						<span class="close_icon">×</span>
 					</div> -->
 					<div class="add_one">
 						+
@@ -76,13 +76,88 @@
 					<p>身份证和外国人永久居住证需要上传正反面</p>
 				</div>
 			</div>
+			<div class="step3 step" id="step3" style="display: none;">
+				<div class="card_wraper" style="display: block;">
+					<img src="images/money_card.png" alt="">
+					<button class="camera_btn"></button>
+					<p class="tips">拍摄银行卡正面</p>
+				</div>
+				<div class="mess_wraper" style="display: none;">
+					<div class="scan_wraper" style="display: block;">
+						<div class="scan_grad"></div>
+						<div class="scan_card">
+							<img src="images/money_card.png" alt="">
+						</div>
+						<p>OCR自动识别中，请稍等...</p>
+					</div>
+					<div class="card_mes" style="display: none;">
+						<div class="ocr_tips">
+							<p>OCR识别失败！</p>
+							<p>请重新拍摄，或手动填写</p>
+						</div>
+						 <div class="cards_container">
+						 	<div class="one_card">
+								<img src="images/money_card.png" alt="">
+								<button class="choice_card">选这张</button>
+							</div>
+							<div class="add_one">
+								+
+							</div>
+						 </div>
+						<button class="next_step_btn">下一步</button>
+						<div class="card_form">
+							<div class="username">
+								<label for="">户名</label>
+								<input type="text" placeholder="请输入账户姓名" />
+							</div>
+							<div class="account">
+								<label for="">账号</label>
+								<input type="text" placeholder="请输入银行卡号">
+							</div>
+							<div class="bank">
+								<label for="">开户行</label>
+								<input type="text" placeholder="请选择" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="step4 step" id="step4" style="display: none;">
+				<div class="card_wraper">
+					<img src="images/confirm.png" alt="">
+					<button class="camera_btn"></button>
+				</div>
+				<div class="cards_container" style="display: none;">
+					<div class="one_card">
+						<img src="images/prove1.jpg" alt="">
+						<span class="close_icon">×</span>
+					</div>
+					<div class="add_one">
+						+
+					</div>
+				</div>
+				<div class="wram_tips"
+					<p>温馨提示：</p>
+					<p>《诊断证明书》或《出院小结》需含出入。。。</p>
+				</div>
+			</div>
+			<div class="step5 step" id="step5" style="display: none;">
+				<div class="card_wraper">
+					<button class="camera_btn"></button>
+					<p class="tips">拍照上传</p>
+				</div>
+				<div class="wram_tips">
+					<p>温馨提示：</p>
+					<p>《诊断证明书》或《出院小结》需含出入。。。</p>
+				</div>
+			</div>
 		</div>
 	</section>
 	<script type="text/javascript">
 		window.onload=function(){
 			// section1
 			var isection1=document.getElementById('section1');
-
+			var isection2=document.getElementById('section2');
 			isection1.querySelector('.begin_btn').onclick=function(){
 				var opacity_0s=isection1.querySelectorAll('.opacity_0');
 				for(var i=0,l=opacity_0s.length;i<l;i++){
@@ -95,13 +170,16 @@
 					// 进入section2
 					isection1.querySelector('.next_step').style.display='block';
 					setTimeout(function(){
-						var isection2=document.getElementById('section2');
 						isection2.style.display='block';
 					},2000);
 				},600);
 			}
+			//section2
 			var istep1=document.getElementById('step1');
 			var istep2=document.getElementById('step2');
+			var istep3=document.getElementById('step3');
+			var istep4=document.getElementById('step4');
+			var istep5=document.getElementById('step5');
 			// step1
 			istep1.querySelector('.camera_btn').onclick=function(){
 				// 显示相机图片提示信息
@@ -122,23 +200,33 @@
 					qcamera_img.style.animationName='left_out';
 
 					setTimeout(function(){
-						istep1.style.display='none';
-						istep2.style.display='block';
+						change_step('add');
 					},500);
 				},1000);
 			}
 			//step2
 			istep2.querySelector('.camera_btn').onclick=function(){
 				istep2.querySelector('.card_wraper').style.display='none';
-				istep2.querySelector('.cards_container').style.display='block';
-
-				var add_node=create_card('images/id_card.jpeg');
-				setTimeout(function(){
-					istep2.querySelector('.cards_container').insertBefore(add_node,istep2.querySelector('.add_one'));
-				},300);
-				
+				var cards_container=istep2.querySelector('.cards_container');
+				cards_container.style.display='block';
+				var add_one_btn=istep2.querySelector('.add_one');
+				add_card(cards_container,add_one_btn,'images/id_card.jpeg');
+				// 添加图片
+				add_one_btn.onclick=function(){
+					add_card(cards_container,add_one_btn,'images/id_card_back.jpeg');
+					this.parentNode.removeChild(this);
+					setTimeout(function(){
+						cards_container.style.animationName='cards_leave';
+						step2.querySelector('.wram_tips').style.opacity=0;
+						setTimeout(function(){
+							change_step('add');
+						},500);
+					},1000);
+					
+				}
 			}
-			function create_card(img_src){
+			//增加节点
+			function add_card(parentNode,lastNode,img_src){
 				var new_div=document.createElement('div');
 				new_div.setAttribute('class','one_card');
 				
@@ -147,10 +235,97 @@
 				new_div.appendChild(new_img);
 
 				var icon_span=document.createElement('span');
-				icon_span.setAttribute('class','class="mui-icon mui-icon-closeempty close_ico');
+				icon_span.setAttribute('class','close_icon');
+				icon_span.innerText='×';
+				icon_span.onclick=function(){
+					var delNode=this.parentNode;
+					var delparentNode=delNode.parentNode;
+					delparentNode.removeChild(delNode);
+				}
 				new_div.appendChild(icon_span);
 
-				return new_div;
+				parentNode.insertBefore(new_div,lastNode);
+			}
+			//step3
+			istep3.querySelector('.camera_btn').onclick=function(){
+				istep3.querySelector('.card_wraper').style.display='none';
+				istep3.querySelector('.mess_wraper').style.display='block';
+				setTimeout(function(){
+					istep3.querySelector('.scan_wraper').style.display='none';
+					istep3.querySelector('.card_mes').style.display='block';
+				},2000);
+			}
+			istep3.querySelector('.one_card').onclick=function(){
+				this.setAttribute('class','one_card_big');
+				this.querySelector('.choice_card').onclick=function(){
+					var one_card_big=istep3.querySelector('.one_card_big');
+					one_card_big.style.backgroundColor='rgba(0,0,0,0)';
+					this.style.display='none';
+					istep3.querySelector('.ocr_tips').style.opacity='0';
+					istep3.querySelector('.add_one').style.opacity='0';
+					one_card_big.getElementsByTagName('img')[0].style.animationName='card_big_img_scale';
+					istep3.querySelector('.next_step_btn').style.display='block';
+					one_card_big.style.zIndex=-1;
+					istep3.querySelector('.next_step_btn').onclick=function(){
+							change_step('add');
+					}
+				}
+			}
+			//step4
+			istep4.querySelector('.camera_btn').onclick=function(){
+				istep4.querySelector('.card_wraper').style.display='none';
+				var cards_container=istep4.querySelector('.cards_container');
+				cards_container.style.display='block';
+				var add_one_btn=istep4.querySelector('.add_one');
+				add_one_btn.onclick=function(){
+					add_card(cards_container,this,'images/prove2.png');
+				}
+			}
+			//全局
+			var now_step=0;//当前步骤数
+			isection2.querySelector('.now_message').onclick=function (event) {
+				var arrow_node=event.target.getAttribute('date-arrow');
+				if(arrow_node=='left'){
+					change_step('sub');
+				}else if(arrow_node=='right'){
+					change_step('add');
+				}
+			}
+			//更改步骤事件
+			function change_step(event) {
+				//头部列表联动
+				var circle_num=isection2.querySelectorAll('.circle_num');
+				var all_step=isection2.querySelectorAll('.step');
+				var header_mes=isection2.querySelector('.mess_text');
+				var mess_arr=[
+					'提交理赔申请书',
+					'受益人身份证明',
+					'银行卡信息',
+					'诊断证明/出院小结',
+					'其他补充材料'
+				];
+				if(event=='add'){
+					now_step++;
+					if(now_step>4){
+						now_step=4;
+						alert('已是最后步骤');
+					}
+				}else if(event=='sub'){
+					now_step--;
+					if(now_step<0){
+						now_step=0;
+						mui.toast('已是第一步骤')
+					}
+				}
+				//更改顶部小圆圈样式，以及显示不同的step
+				for(var i=0,l=circle_num.length;i<l;i++){
+					circle_num[i].setAttribute('class','circle_num');
+					all_step[i].style.display='none';
+				}
+				circle_num[now_step].setAttribute('class','circle_num active');
+				all_step[now_step].style.display='block';
+				// 修改头部信息
+				isection2.querySelector('.mess_text').innerText=mess_arr[now_step];
 			}
 		}
 	</script>

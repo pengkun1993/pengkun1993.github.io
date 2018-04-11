@@ -421,7 +421,7 @@ section{
 	line-height: 1.5rem;
 }
 /*step2*/
-.step2 .card_wraper{
+.card_wraper{/*2/3*/
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -431,14 +431,12 @@ section{
 	height: 50vw;
 	text-align: center;
 }
-.step2 .card_wraper img{
+.card_wraper img{
 	display: block;
 	margin-left: 10%;
 	width: 80%;
 	height: 100%;
-	box-shadow: 0 0 2rem #000;
 	animation: card_right_in 0.5s linear 0s 1;
-	
 }
 @keyframes card_right_in{
 	from{
@@ -450,8 +448,11 @@ section{
 		transform: translateX(0%) rotate(0deg);
 	}
 }
+.step2 .card_wraper img{
+	box-shadow: 0 0 2rem #000;
+}
 /*相机按钮*/
-.step2 .card_wraper .camera_btn{
+.card_wraper .camera_btn{
 	position: absolute;
 	top: 45vw;
 	left: 0;
@@ -465,6 +466,8 @@ section{
 	border: 0;
 	outline: none;
 	box-shadow: 0 5px 10px #000;
+}
+.step2 .card_wraper .camera_btn{
 	animation:camera_big 0.5s linear 0s 1;
 }
 @keyframes camera_big{
@@ -476,13 +479,13 @@ section{
 	}
 }
 /*拍照上传*/
-.step2 .card_wraper .tips{
+.card_wraper .tips{
 	margin-top: 20%;
 	font-size: 1.2rem;
 	color: #fff;
 }
 /*card容器*/
-.step2 .cards_container{
+.cards_container{
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -491,20 +494,35 @@ section{
 	width: 100%;
 	height: 70%;
 	padding:0 10%;
+	overflow: auto;
+	transform: -100% 100%;
+	animation: 0.5s linear 0s 1;
+	animation-fill-mode: forwards;
 }
-.step2 .cards_container .one_card{
+@keyframes cards_leave{
+	from{
+		opacity: 1;
+		transform: rotateZ(0deg) translate(0);
+	}
+	to{
+		opacity: 0;
+		transform: rotateZ(-45deg) translate(-100%);
+	}
+}
+.cards_container .one_card{
 	position: relative;
 	display: inline-block;
-	width: 30%;
-	height: 18vw;
+	width:30%;
+	height:18vw;
 	background-color: #fff;
 	margin-left: 2%;
+	margin-top: 5%;
 	padding: 2%;
 	box-shadow: 0 0 1rem #000;
 	vertical-align: middle;
 	animation: big_small 0.5s linear 0s 1;
 }
-.step2 .cards_container .one_card img{
+.cards_container .one_card img{
 	display: block;
 	top: 0;
 	left: 0;
@@ -514,7 +532,7 @@ section{
 	height: 100%;
 	box-shadow: 0 0 1rem #000;
 }
-.step2 .cards_container .one_card .close_icon{
+.cards_container .one_card .close_icon{
 	position: absolute;
 	top: -0.5rem;
 	right: -0.5rem;
@@ -527,19 +545,263 @@ section{
 	line-height: 1rem;
 }
 /*增加照片*/
-.step2 .cards_container .add_one{
+.cards_container .add_one{
 	position: relative;
 	display: inline-block;
 	width: 30%;
 	height: 18vw;
 	background-color: #405276;
 	margin-left: 3%;
+	margin-top: 5%;
 	vertical-align: middle;
 	font-size: 5rem;
 	text-align: center;
-	line-height: 14vw;
+	line-height: 18vw;
 	color: #6785B8;
 }
+.step2 .wram_tips{
+	transition: opacity 0.5s linear;
+}
+/*step3*/
+/*相机按钮动画*/
+.step3 .card_wraper .camera_btn{
+	animation:small_big 0.3s linear 0.2s 1;
+	animation-fill-mode: both;
+	box-shadow: 0 0 0;
+}
+@keyframes small_big{
+	from{
+		opacity: 0;
+		transform: scale(0.2);
+	}
+	to{
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+.step3 .scan_wraper{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 100%;
+	height: 70vw;
+	text-align: center;
+	overflow: hidden;
+}
+.step3 .scan_wraper .scan_card,.step3 .scan_wraper .scan_grad{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 80%;
+	height: 50vw;
+	text-align: center;
+}
+.step3 .scan_wraper .scan_card{
+	padding: 2%;
+	background-color: #fff;
+}
+.step3 .scan_wraper .scan_card img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.step3 .scan_wraper p{
+	position: absolute;
+	bottom: 2%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	color: #fff;
+	text-align: center;
+}
+/*扫描框*/
+.step3 .scan_wraper .scan_grad{
+	background-color: blue;
+	opacity: 0.5;
+	z-index: 999;
+	animation: scan_grad 2s cubic-bezier(0, 0, 0, 0.99) 0s 1;
+}
+@keyframes scan_grad{
+	from{
+		transform: translateY(-100%);
+	}
+	to{
+		transform: translateY(0%);
+	}
+}
+/*银行开信息表单块*/
+.step3 .card_mes{
+	position: relative;
+	height: 70vh;
+}
+.step3 .card_mes .ocr_tips{
+	margin-left: 10%;
+	width: 80%;
+	height: 20%;
+	border-radius: 0.5rem;
+	background-color: rgba(0,0,0,0.4);
+	padding: 5%;
+	animation: ocr_show 0.5s linear 0s 1;
+	animation-fill-mode: both;
+}
+@keyframes ocr_show{
+	from{
+		transform: scale(0.2);
+	}
+	to{
+		transform: scale(1);
+	}
+}
+.step3 .card_mes .ocr_tips p{
+	color: #fff;
+	text-align: center;
+	line-height: 1.5rem;
+	font-size: 1rem;
+}
+.step3 .card_mes .cards_container{
+	position: relative;
+	padding: 10%;
+	height: 40%;
+	text-align: center;
+}
+.step3 .card_mes .cards_container .add_one{
+	margin-left: 5%;
+}
+.step3 .card_mes .cards_container .one_card .choice_card{
+	display: none;
+}
+/*银行卡放大显示*/
+.step3 .card_mes .cards_container .one_card_big{
+	position: fixed;
+	top: 0%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 99;
+}
+.step3 .card_mes .cards_container .one_card_big img{
+	display: block;
+	position: absolute;
+	top: 30%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 80%;
+	height: 30%;
+	border:0.5rem #fff solid;
+	border-radius: 0.2rem;
+	animation: card_big_img 0.5s linear 0s 1;
+	animation-fill-mode: both;
+}
+@keyframes card_big_img{
+	from{
+		transform:translate(-10%,10%) scale(0.2);
+	}
+	to{
+		transform:translateX(0%) scale(1);
+	}
+}
+@keyframes card_big_img_scale{
+	from{
+		transform:scale(1);
+	}
+	to{
+		transform:scale(0.8);
+	}
+}
+.step3 .card_mes .cards_container .one_card_big .choice_card{
+	position: absolute;
+	bottom: 5%;
+	right: 5%;
+	width: 5rem;
+	height: 2rem;
+	font-size: 1rem;
+	line-height: 2rem;
+	background-color: #415B92;
+	color: #fff;
+	padding: 0;
+	border:none;
+}
+/*下一步*/
+.step3 .card_mes .next_step_btn{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin:0 auto;
+	width: 80%;
+	height: 3rem;
+	padding: 0;
+	line-height: 2rem;
+	font-size: 1rem;
+	display: none;
+	animation: next_step_btn 0.5s linear 0s 1;
+}
+@keyframes next_step_btn{
+	from{
+		transform: translateY(100%);
+	}
+	to{
+		transform: translateY(0%);
+	}
+}
+/*银行信息表单*/
+.step3 .card_mes .card_form label{
+	display: inline-block;
+	width: 25%;
+	padding-left: 10%;
+	font-size: 1rem;
+	vertical-align: middle;
+	color: #aaa;
+}
+.step3 .card_mes .card_form input{
+	display: inline-block;
+	background:none;
+	border:none;
+	border-bottom: 2px solid #aaa;
+	border-radius: 0;
+	width: 60%;
+	font-size: 1rem;
+	margin-right: 10%;
+	vertical-align: middle;
+	line-height: 2rem;
+
+}
+.step3 .card_mes .card_form input::-webkit-input-placeholder{
+    color:#aaa;
+}
+/*step4*/
+.step4 .card_wraper{
+	width: 60%;
+	height: 60vw;
+}
+.step4 .card_wraper .camera_btn{
+	top: 50vw;
+	height: 20vw;
+	width: 20vw;
+}
+/*step5*/
+.step5 .card_wraper{
+	animation: big_small 0.5s linear 0s 1;
+}
+.step5 .card_wraper .camera_btn{
+	position: relative;
+	top: 10vw;
+	width: 30vw;
+	height: 30vw;
+}
+
+
+
+
+
 
 
 
