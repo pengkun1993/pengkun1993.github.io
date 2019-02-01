@@ -23,7 +23,7 @@ html,body{
 body{
 	background-color: green;
 	overflow: hidden;
-	background: url('./bg.jpg') no-repeat center center;
+	background: url('./bg.gif') no-repeat center center;
 	background-size: 100% 100%;
 }
 .content{
@@ -44,20 +44,20 @@ body{
 	width: 100px;
 	height: 100px;
 	transform-style: preserve-3d;
-	transform: rotateX(-110deg);
+	transform: rotateX(-120deg);
 	animation: ani 3s 6s linear;
 	-webkit-animation: ani 3s 6s linear;
 	/*animation-fill-mode:forwards;*/
 }
 @keyframes ani{
 	0%{
-		transform:rotateX(-110deg) rotateZ(0deg);
+		transform:rotateX(-120deg) rotateZ(0deg);
 	}
 	50%{
-		transform:rotateX(-110deg) rotateZ(180deg);
+		transform:rotateX(-120deg) rotateZ(180deg);
 	}
 	100%{
-		transform:rotateX(-110deg) rotateZ(360deg);
+		transform:rotateX(-120deg) rotateZ(360deg);
 	}
 }
 .wraper .pic{
