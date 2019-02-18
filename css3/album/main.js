@@ -6,7 +6,6 @@ var iwraper;
 window.onload=function(){
 	iwraper=document.getElementById('wraper');
 	var pics=iwraper.getElementsByTagName('div');
-	let canRotate = false;
     //取消鼠标拖拽文件进入窗口的默认行为
     window.ondragover = function (e) {
         e.preventDefault();
@@ -14,8 +13,7 @@ window.onload=function(){
     window.ondrop = function (e) {
         e.preventDefault();
     }
-	for(let i=0;i<pics.length;i++){
-		pics[i].style.transition='all 0.5s linear '+i*0.5+'s';
+	for(var i=0;i<pics.length;i++){
 		pics[i].style.transform='rotateX(90deg) rotateY('+(i*30)+'deg) translateZ(300px)';
 		//拖拽
         pics[i].index = i;
@@ -29,9 +27,6 @@ window.onload=function(){
             }
 		}
 	}
-	setTimeout(function(){
-		canRotate=true;
-	},8000)
 	window.addEventListener('mousedown',function(e){
 		e.preventDefault();
 		lastpoint={x:e.clientX,y:e.clientY};
@@ -74,16 +69,14 @@ window.onload=function(){
 			state=0;
 		}
 	});*/
-	function rotatef($now){
-		var del_x=$now.x-lastpoint.x;
-		var del_y=lastpoint.y-$now.y;//由于坐标轴向下所以需反转
+}
+function rotatef($now){
+	var del_x=$now.x-lastpoint.x;
+	var del_y=lastpoint.y-$now.y;//由于坐标轴向下所以需反转
 
-		angle_x+=del_x*0.1;
-		angle_y+=del_y*0.1;
-
-		iwraper.style.transform='rotateX('+(-90+angle_y)+'deg ) rotateZ('+angle_x+'deg) ';
-			
-
-		lastpoint=$now;
-	}
+	angle_x+=del_x*0.1;
+	angle_y+=del_y*0.1;
+	iwraper.style.transform='rotateX('+(-90+angle_y)+'deg ) rotateZ('+angle_x+'deg) ';
+	
+	lastpoint=$now;
 }
